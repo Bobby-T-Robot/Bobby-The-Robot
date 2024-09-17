@@ -289,6 +289,8 @@ body{
     text-overflow: ellipsis;
     padding-left: 2em;
     padding-top: 1em;
+    animation-name: menuRight;
+    animation-duration: 2s;
 }
 
 #menuRight:hover{
@@ -307,4 +309,9 @@ body{
     position: fixed;
     padding-left: 2em;
     padding-top: 1em;
+}
+
+@keyframes menuRight{
+    from{transform: translate(100%, -20%)}
+    to{transform: translate(-100%, -20%)}
 }
