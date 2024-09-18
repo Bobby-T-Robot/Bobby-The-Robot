@@ -13,6 +13,7 @@ body{
     font-family:'Courier New', Courier, monospace;
     color: #00ffd9;
     text-shadow: 0 0 20px #89fff7;
+    padding-top: 1em;
 }
 
 .slide-in-welcome{
@@ -38,12 +39,18 @@ body{
     height: 15em;
     width: 15em;
     border-radius: 50em;
-    border: solid;
-    border-color: crimson;
+    border: none;
+    box-shadow: 0 0 40px black;
     border-width: 0.5em;
     position: relative;
     left: 50%;
     transform: translate(-50%);
+    transition: height 0.5s, width 0.5s;
+}
+
+#pfp:hover{
+    height: 17em;
+    width: 17em;
 }
 
 .fade-in2{
@@ -247,11 +254,12 @@ body{
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 10%;
     border: none;
-    height: 40em;
+    height: 42em;
     width: 30em;
     align-items: center;
     left: 50%;
     top: 20%;
+    padding-top: 1em;
     transform: translate(-50%, -15%);
     overflow: hidden;
     text-overflow: ellipsis;
@@ -268,7 +276,7 @@ body{
     25% {height: 5em; opacity: 75%; background-color: #332e57;}
     50% {height: 5em;}
     75% {height: 4em;}
-    100% {height: 40em;}
+    100% {height: 42em;}
 }
 
 #menuRight{
@@ -278,13 +286,12 @@ body{
     left: 100%;
     top: 24.5%;
     transform: translate(-100%, -20%);
-    background-color: rgba(0, 0, 0, 0.5);
-    background-image: url('FakeShader.png');
+    background-color: rgb(21, 18, 32);
     color: rgba(255, 255, 255, 0);
     white-space: nowrap;
+    border-radius: 5% 0 0 5%;
     border: none;
     outline: 1.5em solid rgb(41, 178, 215);
-    border-radius: 5% 0 0 5%;
     position: fixed;
     transition: width 1s, color 1s;
     text-overflow: ellipsis;
@@ -302,10 +309,9 @@ body{
     border-radius: 5% 0 0 5%;
     transform: translate(-100%, -20%);
     background-color: rgb(21, 18, 32);
-    background-image: url('FakeShader.png');
     border: none;
     position: fixed;
-    color: rgba(255, 255, 255, 1);
+    color: rgba(255, 255, 255, 0.7);
     text-align: start;
     opacity: 1;
     position: fixed;
@@ -328,15 +334,17 @@ body{
     padding-bottom: 1em;
     padding-left: 1em;
     bottom:72%;
+    opacity: 0.7;
 }
 
 #nameRight{
     position: absolute;
-    padding-top: 3em;
+    padding-top: 1em;
     padding-left: 7em;
     font-family:'Courier New', Courier, monospace;
     color: #89fff7;
     text-shadow: 0 0 20px #89fff7;
+    opacity: 0.7;
 }
 
 #menuRight > #pfp2{
@@ -344,7 +352,7 @@ body{
     height: 7em;
     width: 20em;
     border: none;
-    background-color: rgb(48,38,88);
+    background-color: rgba(48,38,88,0.5);
     border-radius: 5%;
     opacity: 0;
 }
@@ -395,7 +403,8 @@ body{
     position: absolute;
     font-family:'Courier New', Courier, monospace;
     padding-left: 7em;
-    padding-top: 4.5em;
+    padding-top: 2.5em;
+    opacity: 0.7;
 }
 
 #cam{
@@ -467,4 +476,20 @@ body{
     border-radius: 10%;
     background-color: rgb(41, 178, 215);
     border: none;
+}
+
+#fakeShad{
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    animation-name: fakeShad;
+    animation-iteration-count: infinite;
+    animation-duration: 0.66s;
+    animation-direction: alternate;
+}
+
+@keyframes fakeShad{
+    from{opacity: 0.33};
+    to{opacity: 0.66};
 }
