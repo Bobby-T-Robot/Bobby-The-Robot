@@ -314,7 +314,7 @@ body{
 }
 
 @keyframes menuRight{
-    from{transform: translate(100%, -20%)}
+    from{transform: translate(200%, -20%)}
     to{transform: translate(-100%, -20%)}
 }
 
