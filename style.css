@@ -123,7 +123,7 @@ body{
 
 #sub:hover::after{
     opacity: 1;
-    transform: translateX(-50%) translateY(20%)
+    transform: translateX(-50%);
 }
 
 
@@ -279,13 +279,14 @@ body{
     top: 24.5%;
     transform: translate(-100%, -20%);
     background-color: rgba(0, 0, 0, 0.5);
+    background-image: url('FakeShader.png');
     color: rgba(255, 255, 255, 0);
     white-space: nowrap;
     border: none;
+    outline: 1.5em solid rgb(41, 178, 215);
     border-radius: 5% 0 0 5%;
     position: fixed;
     transition: width 1s, color 1s;
-    overflow: hidden;
     text-overflow: ellipsis;
     padding-left: 2em;
     padding-top: 1em;
@@ -300,7 +301,8 @@ body{
     top: 24.5%;
     border-radius: 5% 0 0 5%;
     transform: translate(-100%, -20%);
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgb(21, 18, 32);
+    background-image: url('FakeShader.png');
     border: none;
     position: fixed;
     color: rgba(255, 255, 255, 1);
@@ -314,4 +316,155 @@ body{
 @keyframes menuRight{
     from{transform: translate(100%, -20%)}
     to{transform: translate(-100%, -20%)}
+}
+
+#iconRight{
+    position: fixed;
+    height: 7em;
+    width: auto;
+    border: none;
+    border-radius: 10%;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-left: 1em;
+    bottom:72%;
+}
+
+#nameRight{
+    position: absolute;
+    padding-top: 3em;
+    padding-left: 7em;
+    font-family:'Courier New', Courier, monospace;
+    color: #89fff7;
+    text-shadow: 0 0 20px #89fff7;
+}
+
+#menuRight > #pfp2{
+    position: relative;
+    height: 7em;
+    width: 20em;
+    border: none;
+    background-color: rgb(48,38,88);
+    border-radius: 5%;
+    opacity: 0;
+}
+
+#menuRight:not(:hover) > #pfp2{
+    transition: opacity 1s;
+    opacity: 0;
+}
+
+#menuRight:hover > #pfp2{
+    transition: opacity 1s ease-in-out;
+    opacity: 1;
+}
+
+#but1{
+    height: 1em;
+    width: 1em;
+    border: none;
+    background-color: #48db4a;
+    border-radius: 50%;
+    position: relative;
+    margin-bottom: 2em;
+}
+
+#but2{
+    height: 1em;
+    width: 1em;
+    border: none;
+    background-color: #edc526;
+    border-radius: 50%;
+    position: absolute;
+    margin-left: 2em;
+}
+
+#but3{
+    height: 1em;
+    width: 1em;
+    border: none;
+    background-color: #f62727;
+    border-radius: 50%;
+    position: absolute;
+    margin-left: 4em;
+}
+
+#status{
+    color: white;
+    text-shadow: 0 0 20px white;
+    position: absolute;
+    font-family:'Courier New', Courier, monospace;
+    padding-left: 7em;
+    padding-top: 4.5em;
+}
+
+#cam{
+    background-color: #2a2541;
+    position: absolute;
+    height: 1em;
+    width: 1em;
+    border-radius: 50%;
+    transform: translate(1200%, -220%);
+}
+
+#cam2{
+    background-color: transparent;
+    position: absolute;
+    height: 0.8em;
+    width: 0.8em;
+    border-radius: 50%;
+    transform: translate(1512%, -263%);
+    border: solid;
+    border-color: #453d69;
+}
+
+#cam3{
+    background-color: #685f92;
+    position: absolute;
+    height: 0.3em;
+    width: 0.3em;
+    border-radius: 50%;
+    transform: translate(4117%, -615%);
+    border: none;
+}
+
+#cam4{
+    background-color: #2a2541;
+    position: absolute;
+    transform: translate(280%, -220%);
+    height: 1em;
+    width: 5em;
+    border-radius: 20%;
+}
+
+#tabBut{
+    height: 1.2em;
+    width: 5em;
+    position: absolute;
+    border: solid;
+    background-color: transparent;
+    border-color:rgb(39, 110, 176);
+    border-radius: 20%;
+    top: 100%;
+    transform: translate(300%, 13%)
+}
+
+#fakeBut{
+    height: 5em;
+    width: 1em;
+    position: absolute;
+    transform: translate(-400%, 100%);
+    border-radius: 10%;
+    background-color: rgb(41, 178, 215);
+    border: none;
+}
+
+#fakeBut2{
+    height: 3em;
+    width: 1em;
+    position: absolute;
+    transform: translate(-400%, 400%);
+    border-radius: 10%;
+    background-color: rgb(41, 178, 215);
+    border: none;
 }
