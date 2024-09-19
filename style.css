@@ -281,26 +281,38 @@ body{
 
 #menuRight{
     height: 40em;
-    width: 1em;
+    width: 50em;
     font-family: "Comic Sans MS", "Comic Sans", cursive;
     left: 100%;
     top: 24.5%;
-    transform: translate(-100%, -20%);
+    transform: translate(-5%, -20%);
     background-color: rgb(21, 18, 32);
     color: rgba(255, 255, 255, 0);
     white-space: nowrap;
-    border-radius: 5% 0 0 5%;
+    border-radius: 5%;
     border: none;
     outline: 1.5em solid rgb(41, 178, 215);
     position: fixed;
-    transition: width 1s, color 1s;
+    transition: width 1s, color 1s, left 0.5s ease-out;
     text-overflow: ellipsis;
     padding-left: 2em;
     padding-top: 1em;
     animation-name: menuRight;
     animation-duration: 2s;
+    z-index: 1;
 }
 
+#menuRight.movable{
+    left: 25%;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+#menuRight.moved{
+    left: 100%;
+    color: rgba(255, 255, 255, 0);
+}
+
+/*
 #menuRight:hover{
     height: 40em;
     width: 20em;
@@ -318,10 +330,11 @@ body{
     padding-left: 2em;
     padding-top: 1em;
 }
+*/
 
 @keyframes menuRight{
     from{transform: translate(200%, -20%)}
-    to{transform: translate(-100%, -20%)}
+    to{transform: translate(-5%, -20%)}
 }
 
 #iconRight{
@@ -355,16 +368,15 @@ body{
     background-color: rgba(48,38,88,0.5);
     border-radius: 5%;
     opacity: 0;
-}
-
-#menuRight:not(:hover) > #pfp2{
     transition: opacity 1s;
-    opacity: 0;
 }
 
-#menuRight:hover > #pfp2{
-    transition: opacity 1s ease-in-out;
+#menuRight.movable #pfp2 {
     opacity: 1;
+}
+
+#menuRight.moved #pfp2 {
+    opacity: 0;
 }
 
 #but1{
@@ -395,6 +407,24 @@ body{
     border-radius: 50%;
     position: absolute;
     margin-left: 4em;
+    z-index: 1;
+    transition: background-color 0.1s, height 0.1s, width 0.1s;
+}
+
+#but3:hover{
+    height: 1.15em;
+    width: 1.15em;
+    border: none;
+    background-color: #ff4268;
+    border-radius: 50%;
+    position: absolute;
+    margin-left: 4em;
+}
+
+#but3:active{
+    height: 0.9em;
+    width: 0.9em;
+    background-color: #ce2222;
 }
 
 #status{
@@ -413,7 +443,7 @@ body{
     height: 1em;
     width: 1em;
     border-radius: 50%;
-    transform: translate(1200%, -220%);
+    transform: translate(1800%, -220%);
 }
 
 #cam2{
@@ -422,7 +452,8 @@ body{
     height: 0.8em;
     width: 0.8em;
     border-radius: 50%;
-    transform: translate(1512%, -263%);
+    left: 7%;
+    transform: translate(2075%, -263%);
     border: solid;
     border-color: #453d69;
 }
@@ -432,17 +463,18 @@ body{
     position: absolute;
     height: 0.3em;
     width: 0.3em;
+    left: 15%;
     border-radius: 50%;
-    transform: translate(4117%, -615%);
+    transform: translate(4285%, -615%);
     border: none;
 }
 
 #cam4{
     background-color: #2a2541;
     position: absolute;
-    transform: translate(280%, -220%);
+    transform: translate(285%, -220%);
     height: 1em;
-    width: 5em;
+    width: 7em;
     border-radius: 20%;
 }
 
@@ -455,7 +487,7 @@ body{
     border-color:rgb(39, 110, 176);
     border-radius: 20%;
     top: 100%;
-    transform: translate(300%, 13%)
+    transform: translate(400%, 13%)
 }
 
 #fakeBut{
@@ -476,6 +508,26 @@ body{
     border-radius: 10%;
     background-color: rgb(41, 178, 215);
     border: none;
+    transition: width 0.1s, background-color 0.1s;
+    z-index: -1;
+}
+
+#fakeBut2:hover{
+    height: 3em;
+    width: 1.04em;
+    position: absolute;
+    transform: translate(-400%, 400%);
+    border-radius: 10%;
+    background-color: rgb(55, 197, 229);
+    border: none;
+    z-index: -1;
+}
+
+
+#fakeBut2:active{
+    background-color: rgb(30, 120, 194);
+    width: 0.95em;
+    z-index: -1;
 }
 
 #fakeShad{
@@ -483,10 +535,13 @@ body{
     z-index: 1;
     width: 100%;
     height: 100%;
+    left: -0.2%;
+    display: block;
     animation-name: fakeShad;
     animation-iteration-count: infinite;
     animation-duration: 0.66s;
     animation-direction: alternate;
+    opacity: 0.66;
 }
 
 @keyframes fakeShad{

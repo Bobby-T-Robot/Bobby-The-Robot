@@ -39,3 +39,19 @@ const join = document.getElementById('join');
     join.addEventListener('mouseover', () => {
       join.setAttribute('data-tooltip3', 'Discord');
     });
+
+const fakeBut2 = document.getElementById('fakeBut2');
+const menuRight = document.getElementById('menuRight');
+const but3 = document.getElementById('but3');
+
+fakeBut2.addEventListener('click', function tabOpen() {
+  menuRight.classList.remove('moved'); // remove the class before toggling
+  menuRight.classList.toggle('movable');
+  console.log('Button Clicked');
+});
+
+but3.addEventListener('click', function tabClose() {
+  menuRight.classList.remove('movable'); // remove the class before toggling
+  menuRight.classList.toggle('moved');
+  console.log('Exited');// oooo kmssss
+});
