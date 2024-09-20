@@ -501,7 +501,7 @@ body{
     position: absolute;
     transform: translate(-400%, 400%);
     border-radius: 10%;
-    background-color: rgb(41, 178, 215);
+    background-color: rgb(55, 197, 229);
     border: none;
     transition: width 0.1s, background-color 0.1s;
     z-index: -1;
