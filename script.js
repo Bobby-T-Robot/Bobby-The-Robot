@@ -87,7 +87,7 @@ userField.addEventListener("keydown", function(typed){
   if(typed.keyCode === 13 && userField.value === "") {
     typed.preventDefault();
   } else if (typed.keyCode === 13) {
-    alert('Entered ${username}')
+    console.log('Entered ${username}');
   userField.classList.add("fade-out");
   nameHere.classList.add("fade-out");
   thanks.classList.add("notfade-in3");
