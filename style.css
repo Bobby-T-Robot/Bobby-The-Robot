@@ -6,6 +6,11 @@ body{
     background-image: url(speed.gif);
 }
 
+.error{
+    background-image: url(Error.png);
+    background-size: contain;
+}
+
 #welcome{
     text-align: center;
     font-family: 'Courier New', Courier, monospace;

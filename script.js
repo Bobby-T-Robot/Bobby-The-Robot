@@ -146,10 +146,38 @@ closeX.addEventListener('click', function(unasses){
 });
 
 const body = document.querySelector('body');
+const pfp = document.getElementById('pfp');
+const desc = document.getElementById('desc');
+const names = document.getElementById('name');
+const welcome = document.getElementById('welcome');
+const nameRight = document.getElementById('nameRight');
+const statuss = document.getElementById('status');
 
 userField.addEventListener('input', function(passName){
   if(userField.value == "skid"){
     body.classList.add('skid');
     yourName.textContent = `Hello, Skiddy!`;
-  }
+    pfp.remove();
+    const skud = document.createElement('img');
+    skud.src = "skidu.webp";
+    skud.id = "pfp";
+    document.body.appendChild(skud);
+   } else if(userField.value == "nin"){
+      pfp.remove();
+    yourName.textContent = 'nin';
+      desc.textContent = 'nin';
+      body.classList.add('error');
+  const bobbu = document.createElement("img");
+  bobbu.src = "Bobbu.png";
+  bobbu.id = "pfp";
+  bobbu.style.position = 'relative';
+  names.textContent = 'nin the Hedgehog!'
+  names.style.paddingTop = '8em';
+  document.body.appendChild(bobbu);
+  welcome.remove();
+  abil.textContent = 'nin';
+  abil2. textContent = 'nin';
+  statuss.textContent = 'nin';
+  nameRight.textContent = 'nin';
+    }
 });
