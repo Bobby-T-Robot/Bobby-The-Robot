@@ -620,3 +620,137 @@ body{
       top: 90%;
     }
 }
+
+#arts{
+    position: absolute;
+    background-color: #0a121e;
+    border: solid;
+    border-color: #48c0db;
+    text-align: center;
+    color: #48c0db;
+    left: 60%;
+    top: 60%;
+    height: 2em;
+    width: 13em;
+    font-size: 1.3em;
+    letter-spacing: 0.3em;
+    z-index: 2;
+}
+
+#drawings{
+    overflow-y: scroll;
+    overflow-x: hidden;
+    position: absolute;
+    height: 35em;
+    width: 35em;
+    left: 14%;
+    top: 6%;
+    background-color: #0a121e;
+    border: solid;
+    border-color: #48c0db;
+    z-index: 3;
+    opacity: 0;
+    box-sizing: border-box;
+    pointer-events: none;
+}
+
+.showUp{
+    animation-name: showUp;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes showUp{
+    0%{opacity: 0; pointer-events: none; filter: grayscale(100%) brightness(50%) sepia(100%) hue-rotate(300deg) saturate(500%); border-color: #cadb48;}
+    10%{opacity: 0.5; pointer-events: none; filter: grayscale(100%) brightness(50%) sepia(100%) hue-rotate(300deg) saturate(500%); border-color: #cadb48;}
+    15%{opacity: 0; pointer-events: none; filter: grayscale(100%) brightness(50%) sepia(100%) hue-rotate(300deg) saturate(500%); border-color: #cadb48;}
+    20%{opacity: 0.7; pointer-events: none; filter: grayscale(100%) brightness(50%) sepia(100%) hue-rotate(300deg) saturate(500%); border-color: #cadb48;}
+    25%{opacity: 0; pointer-events: none; filter: grayscale(100%) brightness(50%) sepia(100%) hue-rotate(300deg) saturate(500%); border-color: #cadb48;}
+    100%{opacity: 1; pointer-events: auto; background-color: #0a121e; border-color: #48c0db;}
+}
+
+.nin{
+    position: relative;
+    height: 15em;
+    width: 15em;
+    border: solid;
+    border-color: #48c0db;
+    left: 2%;
+    top: 3%;
+}
+
+.nin3{
+    position: relative;
+    height: 15em;
+    width: 15em;
+    border: solid;
+    border-color: #48c0db;
+    left: 9%;
+    top: 3%;
+}
+/*might aswell kms*/
+
+#drawingsWrap ::-webkit-scrollbar {
+    width: 1em;
+    height: 4em;
+}
+
+#drawingsWrap ::-webkit-scrollbar-thumb{
+    background-color: #273a5c;
+    border-radius: 10%;
+}
+
+#drawingsWrap ::-webkit-scrollbar-track{
+    background-color: transparent;
+}
+
+#drawingsWrap ::-webkit-scrollbar-button{
+    background-color: #48c0db;
+}
+
+#drawingsWrap ::-webkit-scrollbar-corner{
+    background-color: #273a5c;
+}
+
+#X{
+    background-color: #48c0db;
+    border: none;
+    position: fixed;
+    z-index: 1;
+    height: 2em;
+    width: 2em;
+    border-radius: 0 0 10% 0;
+    transition: height 0.2s, width 0.2s;
+}
+
+#X:hover{
+    height: 2.3em;
+    width: 2.3em;
+}
+
+#close{
+    position: absolute;
+    color: white;
+    pointer-events: none;
+    border: none;
+    font-weight: bold;
+    left: 28%;
+    top: 7%;
+    font-size: 1.2em;
+}
+
+.showDown{
+    animation-name: showDown;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-direction: reverse;
+}
+
+@keyframes showDown{
+    0%{opacity: 0; pointer-events: none; filter: grayscale(100%) brightness(50%) sepia(100%) hue-rotate(300deg) saturate(500%); border-color: #cadb48;}
+    10%{opacity: 0.5; pointer-events: none; filter: grayscale(100%) brightness(50%) sepia(100%) hue-rotate(300deg) saturate(500%); border-color: #cadb48;}
+    15%{opacity: 0; pointer-events: none; filter: grayscale(100%) brightness(50%) sepia(100%) hue-rotate(300deg) saturate(500%); border-color: #cadb48;}
+    20%{opacity: 0.7; pointer-events: none; filter: grayscale(100%) brightness(50%) sepia(100%) hue-rotate(300deg) saturate(500%); border-color: #cadb48;}
+    25%{opacity: 0; pointer-events: none; filter: grayscale(100%) brightness(50%) sepia(100%) hue-rotate(300deg) saturate(500%); border-color: #cadb48;}
+    100%{opacity: 1; pointer-events: auto; background-color: #0a121e; border-color: #48c0db;}
+}

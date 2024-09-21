@@ -9,9 +9,9 @@ const nameanim = document.getElementById('nameHere');
 const nameHere = document.getElementById('nameHere');
 const thanks = document.getElementById('thanks');
 const yourName = document.getElementById('yourName');
+const drawings = document.getElementById('drawings');
 
 document.addEventListener("DOMContentLoaded", function() {
-  
   fakeBut2.disabled = true;
 });
 
@@ -65,13 +65,13 @@ const but3 = document.getElementById('but3');
 
 fakeBut2.addEventListener('click', function tabOpen() {
   menuRight.classList.remove('moved'); // remove the class before toggling
-  menuRight.classList.toggle('movable');
+  menuRight.classList.add('movable');
   console.log('Button Clicked');
 });
 
 but3.addEventListener('click', function tabClose() {
   menuRight.classList.remove('movable'); // remove the class before toggling
-  menuRight.classList.toggle('moved');
+  menuRight.classList.add('moved');
   console.log('Exited');// oooo kmssss
 });
 
@@ -118,3 +118,16 @@ yourName.style.textShadow = '0 0 20px';
 yourName.style.position = 'absolute';
 yourName.style.bottom = '87.8%';
 yourName.style.left = '5%';
+
+const arts = document.getElementById('arts');
+const Xclose = document.getElementById('X');
+
+arts.addEventListener('click', function(draws){
+  drawings.classList.remove('showDown');
+  drawings.classList.add('showUp');
+});
+
+Xclose.addEventListener('click', function(draws){
+  drawings.classList.remove('showUp');
+  drawings.classList.add('showDown');
+});
