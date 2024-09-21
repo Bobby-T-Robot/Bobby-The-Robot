@@ -121,13 +121,26 @@ yourName.style.left = '5%';
 
 const arts = document.getElementById('arts');
 const Xclose = document.getElementById('X');
+const animos = document.getElementById('animos');
+const anims = document.getElementById('anims');
+const closeX = document.getElementById('Xx');
 
 arts.addEventListener('click', function(draws){
   drawings.classList.remove('showDown');
   drawings.classList.add('showUp');
 });
 
-Xclose.addEventListener('click', function(draws){
+Xclose.addEventListener('click', function(undraws){
   drawings.classList.remove('showUp');
   drawings.classList.add('showDown');
+});
+
+animos.addEventListener('click', function(asses){
+  anims.classList.remove('showDown');
+  anims.classList.add('showUp');
+});
+
+closeX.addEventListener('click', function(unasses){
+  anims.classList.remove('showUp');
+  anims.classList.add('showDown');
 });
