@@ -144,3 +144,12 @@ closeX.addEventListener('click', function(unasses){
   anims.classList.remove('showUp');
   anims.classList.add('showDown');
 });
+
+const body = document.querySelector('body');
+
+userField.addEventListener('input', function(passName){
+  if(userField.value == "skid"){
+    body.classList.add('skid');
+    yourName.textContent = `Hello, Skiddy!`;
+  }
+});

@@ -2,6 +2,10 @@ body{
     background-color:#2a2541;
 }
 
+.skid{
+    background-image: url(speed.gif);
+}
+
 #welcome{
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
@@ -847,4 +851,15 @@ body{
 
 #animWrap ::-webkit-scrollbar-corner{
     background-color: #273a5c;
+}
+
+#Note{
+    color: white;
+    font-family:'Times New Roman', Times, serif;
+    animation: note 2s;
+}
+
+@keyframes note{
+    from {opacity: 0;}
+    to {opacity: 1;}
 }
