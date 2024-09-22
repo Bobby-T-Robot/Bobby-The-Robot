@@ -119,11 +119,15 @@ yourName.style.position = 'absolute';
 yourName.style.bottom = '87.8%';
 yourName.style.left = '5%';
 
+//tabs
 const arts = document.getElementById('arts');
 const Xclose = document.getElementById('X');
 const animos = document.getElementById('animos');
 const anims = document.getElementById('anims');
 const closeX = document.getElementById('Xx');
+const closeXx = document.getElementById('Xxx');
+const pixels = document.getElementById('pixels');
+const pixelo = document.getElementById('pixelo');
 
 arts.addEventListener('click', function(draws){
   drawings.classList.remove('showDown');
@@ -145,6 +149,17 @@ closeX.addEventListener('click', function(unasses){
   anims.classList.add('showDown');
 });
 
+pixelo.addEventListener('click', function(asses){
+  pixels.classList.remove('showDown');
+  pixels.classList.add('showUp');
+});
+
+closeXx.addEventListener('click', function(unasses){
+  pixels.classList.remove('showUp');
+  pixels.classList.add('showDown');
+});
+
+//passwords
 const body = document.querySelector('body');
 const pfp = document.getElementById('pfp');
 const desc = document.getElementById('desc');
