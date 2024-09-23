@@ -889,6 +889,9 @@ body{
     overflow-y: scroll;
     overflow-x: hidden;
     position: absolute;
+    background-image: url(TextureB.png);
+    background-repeat: repeat;
+    background-size: calc(6em);
     height: 35em;
     width: 35em;
     left: 14%;
