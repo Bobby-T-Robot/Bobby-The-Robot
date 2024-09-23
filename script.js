@@ -128,6 +128,9 @@ const closeX = document.getElementById('Xx');
 const closeXx = document.getElementById('Xxx');
 const pixels = document.getElementById('pixels');
 const pixelo = document.getElementById('pixelo');
+const musico = document.getElementById('musico');
+const musics = document.getElementById('musics');
+const closeXxv = document.getElementById('Xxxv');
 
 arts.addEventListener('click', function(draws){
   drawings.classList.remove('showDown');
@@ -149,14 +152,24 @@ closeX.addEventListener('click', function(unasses){
   anims.classList.add('showDown');
 });
 
-pixelo.addEventListener('click', function(asses){
+pixelo.addEventListener('click', function(pisses){
   pixels.classList.remove('showDown');
   pixels.classList.add('showUp');
 });
 
-closeXx.addEventListener('click', function(unasses){
+closeXx.addEventListener('click', function(unpisses){
   pixels.classList.remove('showUp');
   pixels.classList.add('showDown');
+});
+
+musico.addEventListener('click', function(shots){
+  musics.classList.remove('showDown');
+  musics.classList.add('showUp');
+});
+
+closeXxv.addEventListener('click', function(unshots){
+  musics.classList.remove('showUp');
+  musics.classList.add('showDown');
 });
 
 //passwords
