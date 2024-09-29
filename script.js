@@ -209,3 +209,91 @@ userField.addEventListener('input', function(passName){
   nameRight.textContent = 'nin';
     }
 });
+
+const audioPlayer = document.getElementById('audio-player');
+const playPauseBtn = document.querySelector('.play-pause-btn');
+const stopBtn = document.querySelector('.stop-btn');
+const muteBtn = document.querySelector('.mute-button');
+const volumeSlider = document.querySelector('#volume-slider');
+const seekBar = document.querySelector('.seek-bar');
+const playbtn = document.getElementById('play-btn');
+const pausebtn = document.getElementById('pause-btn');
+const unmute = document.getElementById('volumed');
+const mutes = document.getElementById('muted');
+const audioBar = document.querySelector('.audio-bar');
+const audioBobby = document.getElementById('audioBobby');
+const gradient = document.getElementById('gradient');
+
+function ResetButton() {
+  playbtn.classList.remove('fadeOuts');
+  playbtn.classList.remove('fadeIns');
+  pausebtn.classList.remove('fadeOuts');
+  pausebtn.classList.remove('fadeIns');
+}
+
+function ResetStats() {
+  audioBobby.style.opacity = 0;
+  audioBobby.style.left = '50%';
+  audioBar.style.width = '20em';
+  audioBar.style.left = '20%';
+  audioBar.style.backgroundColor = '#453d69';
+  seekBar.style.width = '90%';
+  gradient.classList.remove('dance');
+}
+
+//play/pause
+playPauseBtn.addEventListener('click', () => {
+  if (audioPlayer.paused) {
+    audioPlayer.play();
+  } else {
+    audioPlayer.pause();
+  }
+  //style
+  if (audioBobby.style.opacity = 1) {
+    audioBobby.style.opacity = 1;
+    audioBobby.style.left = 0;
+    audioBar.style.width = '25em';
+    audioBar.style.left = '13%';
+    audioBar.style.backgroundColor = 'transparent';
+    seekBar.style.width = '40%';
+  }
+  playbtn.classList.toggle('fadeOuts');
+  pausebtn.classList.toggle('fadeIns');
+  gradient.classList.toggle('dance');
+
+  if (audioPlayer.paused){
+    ResetStats();
+  }
+});
+
+//stop
+stopBtn.addEventListener('click', () => {
+  audioPlayer.pause();
+  audioPlayer.currentTime = 0;
+  ResetButton();
+});
+
+//mute
+muteBtn.addEventListener('click', () => {
+  audioPlayer.muted = !audioPlayer.muted;
+  unmute.classList.toggle('fadeOuts');
+  mutes.classList.toggle('fadeIns');
+});
+
+//seek bar
+audioPlayer.addEventListener('timeupdate', () => {
+  const currentTime = audioPlayer.currentTime;
+  const duration = audioPlayer.duration; 
+  seekBar.value = (currentTime / duration) * 100;
+});
+
+seekBar.addEventListener('click', (e) => {
+  const clickPosition = e.offsetX;
+  const currentTime = (seekBar.value / 100) * audioPlayer.duration;
+  audioPlayer.currentTime = currentTime;
+});
+
+audioPlayer.addEventListener('ended', () => {
+  ResetButton();
+  ResetStats();
+});

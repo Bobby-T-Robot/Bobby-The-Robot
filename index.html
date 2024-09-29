@@ -37,7 +37,23 @@
     <!--musics here-->
     <div id="musicWrap">
       <div id="musics">
-        <div id="Xxxv"><p id="closevXx">X</p></div><p id="warning">WARNING: BAD MIXING!</p><audio class="unnins" src="MUSIC/song-1.ogg" controls>Browser ain't supporting buddy.</audio><br><br><audio class="unnins" src="MUSIC/song-2.ogg" controls>Browser ain't supporting buddy.</audio><br><br><audio class="unnins" src="MUSIC/song-3.ogg" controls>Browser ain't supporting buddy.</audio><br><br><audio class="unnins" src="MUSIC/song-4.ogg" controls>Browser ain't supporting buddy.</audio><br><br><audio class="unnins" src="MUSIC/song-5.ogg" controls>Browser ain't supporting buddy.</audio><br><br><audio class="unnins" src="MUSIC/song-6.ogg" controls>Browser ain't supporting buddy.</audio><br><br><audio class="unnins" src="MUSIC/song-7.ogg" controls>Browser ain't supporting buddy.</audio><br><br><audio class="unnins" src="MUSIC/song-8.ogg" controls>Browser ain't supporting buddy.</audio><br><br><audio class="unnins" src="MUSIC/song-9.ogg" controls>Browser ain't supporting buddy.</audio>
+        <div id="Xxxv"><p id="closevXx">X</p></div>
+        <p id="warning">WARNING: BAD MIXING!</p>
+        <!--audio player-->
+        <div class="audio-bar">
+          <div id="gradient"></div>
+          <img id ="audioBobby" src="AudioBox.png">
+          <p id="songTitle">Song by Bobby The Robot</p>
+        <audio id="audio-player" src="MUSIC/song-1.ogg" controls>Browser ain't supporting buddy.</audio><!--<br><br><audio class="unnins" src="MUSIC/song-2.ogg" controls>Browser ain't supporting buddy.</audio><br><br><audio class="unnins" src="MUSIC/song-3.ogg" controls>Browser ain't supporting buddy.</audio><br><br><audio class="unnins" src="MUSIC/song-4.ogg" controls>Browser ain't supporting buddy.</audio><br><br><audio class="unnins" src="MUSIC/song-5.ogg" controls>Browser ain't supporting buddy.</audio><br><br><audio class="unnins" src="MUSIC/song-6.ogg" controls>Browser ain't supporting buddy.</audio><br><br><audio class="unnins" src="MUSIC/song-7.ogg" controls>Browser ain't supporting buddy.</audio><br><br><audio class="unnins" src="MUSIC/song-8.ogg" controls>Browser ain't supporting buddy.</audio><br><br><audio class="unnins" src="MUSIC/song-9.ogg" controls>Browser ain't supporting buddy.</audio>-->
+        <div class="audio-controls">
+        <button class = "play-pause-btn"><img id ="play-btn" src="Play.png"><img id="pause-btn" src="Pause.png"></button>
+          <button class="stop-btn"><img id="stop" src="Stop.png"></button>
+          <input type="range" class="seek-bar" min="0" max="100" value="0">
+          <div class="volume-controls">
+            <button class="mute-button"><img id="volumed" src="Volume.png"><img id="muted" src="Mute.png"></button>
+          </div>
+          </div>
+        </div>
       </div>
     </div>
   <div id="cam"></div>
