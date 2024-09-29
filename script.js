@@ -210,19 +210,18 @@ userField.addEventListener('input', function(passName){
     }
 });
 
-const audioPlayer = document.getElementById('audio-player');
+const audioPlayer = document.querySelector('.audio-player');
 const playPauseBtn = document.querySelector('.play-pause-btn');
 const stopBtn = document.querySelector('.stop-btn');
 const muteBtn = document.querySelector('.mute-button');
-const volumeSlider = document.querySelector('#volume-slider');
 const seekBar = document.querySelector('.seek-bar');
-const playbtn = document.getElementById('play-btn');
-const pausebtn = document.getElementById('pause-btn');
-const unmute = document.getElementById('volumed');
-const mutes = document.getElementById('muted');
+const playbtn = document.querySelector('.play-btn');
+const pausebtn = document.querySelector('.pause-btn');
+const unmute = document.querySelector('.volumed');
+const mutes = document.querySelector('.muted');
 const audioBar = document.querySelector('.audio-bar');
-const audioBobby = document.getElementById('audioBobby');
-const gradient = document.getElementById('gradient');
+const audioBobby = document.querySelector('.audioBobby');
+const gradient = document.querySelector('.gradient');
 
 function ResetButton() {
   playbtn.classList.remove('fadeOuts');
@@ -271,6 +270,7 @@ stopBtn.addEventListener('click', () => {
   audioPlayer.pause();
   audioPlayer.currentTime = 0;
   ResetButton();
+  ResetStats();
 });
 
 //mute
