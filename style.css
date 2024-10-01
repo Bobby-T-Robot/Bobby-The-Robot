@@ -1084,7 +1084,7 @@ body{
 
 .audio-bar{
     border: solid;
-    top: 13%;
+    top: 30%;
     left: 20%;
     height: 5em;
     width: 20em;
@@ -1301,6 +1301,7 @@ body{
     left: 25%;
     text-shadow: 0 0 2px #0a121e, 0 0 2px #0a121e, 0 0 2px #0a121e, 0 0 2px #0a121e, 0 0 2px #0a121e, 0 0 2px #0a121e, 0 0 2px #0a121e, 0 0 2px #0a121e, 0 0 2px #0a121e, 0 0 2px #0a121e, 0 0 2px #0a121e, 0 0 2px #0a121e, 0 0 2px #0a121e, 0 0 2px #0a121e, 0 0 2px #0a121e, 0 0 2px #0a121e, 0 0 2px #0a121e, 0 0 2px #0a121e, 0 0 2px #0a121e, 0 0 2px #0a121e;
     z-index: 1;
+    pointer-events: none;
 }
 
 .gradient{
@@ -1322,4 +1323,24 @@ body{
 @keyframes dance{
     0%{opacity: 1;}
     100% {opacity: 0;}
+}
+
+.disc{
+    position: absolute;
+    z-index: -1;
+    height: 10em;
+    width: 10em;
+    left: 34%;
+    top: 20%;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s, top 0.3s;
+}
+
+.discSpin{
+    animation: disc 5s linear infinite forwards;
+}
+
+@keyframes disc{
+    100% {transform: rotate(360deg);}
 }

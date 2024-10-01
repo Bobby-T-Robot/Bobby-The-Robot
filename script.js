@@ -210,6 +210,8 @@ userField.addEventListener('input', function(passName){
     }
 });
 
+//audio player
+let isPlaying = false;
 const audioPlayer = document.querySelector('.audio-player');
 const playPauseBtn = document.querySelector('.play-pause-btn');
 const stopBtn = document.querySelector('.stop-btn');
@@ -222,6 +224,7 @@ const mutes = document.querySelector('.muted');
 const audioBar = document.querySelector('.audio-bar');
 const audioBobby = document.querySelector('.audioBobby');
 const gradient = document.querySelector('.gradient');
+const disc = document.querySelector('.disc');
 
 function ResetButton() {
   playbtn.classList.remove('fadeOuts');
@@ -240,12 +243,27 @@ function ResetStats() {
   gradient.classList.remove('dance');
 }
 
+function discTrigger(){
+  disc.style.opacity = 1;
+  disc.style.top = '17%';
+  disc.classList.add('discSpin');
+  disc.style.animationPlayState = 'running';
+}
+
+function discStop(){
+  disc.style.opacity = 0;
+  disc.style.top = '20%';
+  disc.style.animationPlayState = 'paused';
+}
+
 //play/pause
 playPauseBtn.addEventListener('click', () => {
   if (audioPlayer.paused) {
     audioPlayer.play();
+    isPlaying = true;
   } else {
     audioPlayer.pause();
+    isPlaying = false;
   }
   //style
   if (audioBobby.style.opacity = 1) {
@@ -259,9 +277,11 @@ playPauseBtn.addEventListener('click', () => {
   playbtn.classList.toggle('fadeOuts');
   pausebtn.classList.toggle('fadeIns');
   gradient.classList.toggle('dance');
+  discTrigger();
 
   if (audioPlayer.paused){
     ResetStats();
+    discStop();
   }
 });
 
@@ -271,6 +291,7 @@ stopBtn.addEventListener('click', () => {
   audioPlayer.currentTime = 0;
   ResetButton();
   ResetStats();
+  discStop();
 });
 
 //mute
@@ -296,4 +317,18 @@ seekBar.addEventListener('click', (e) => {
 audioPlayer.addEventListener('ended', () => {
   ResetButton();
   ResetStats();
+  discStop();
+  isPlaying = false;
+});
+
+audioBar.addEventListener('mouseover', () => {
+  if (!isPlaying) {
+    discTrigger();
+  }
+});
+
+audioBar.addEventListener('mouseout', () => {
+  if (!isPlaying) {
+    discStop();
+  }
 });
