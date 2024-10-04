@@ -2,6 +2,16 @@ body{
     background-color:#2a2541;
 }
 
+@font-face {
+    font-family: 'BadGrunge';
+    src: url('Fonts/BadGrunge.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Minecraft';
+    src: url('Fonts/Minecraft.ttf') format('truetype');
+}
+
 .skid{
     background-image: url(speed.gif);
 }
@@ -13,15 +23,17 @@ body{
 
 #welcome{
     text-align: center;
-    font-family: 'Courier New', Courier, monospace;
+    letter-spacing: 0.2em;
+    font-family: 'Minecraft';
     color:#ff0051;
 }
 
 #name{
     text-align: center;
-    font-family:'Courier New', Courier, monospace;
+    font-family: 'BadGrunge';
+    font-size: 3em;
+    letter-spacing: 0.2em;
     color: #00ffd9;
-    text-shadow: 0 0 20px #89fff7;
     padding-top: 1em;
 }
 
@@ -68,7 +80,8 @@ body{
 .abil{
     text-align: center;
     color: #ffb300;
-    font-family:'Courier New', Courier, monospace;
+    letter-spacing: 0.2em;
+    font-family: 'Minecraft';
     opacity: 0;
     transition: opacity 1s;
 }
@@ -80,7 +93,8 @@ body{
 .abil2{
     text-align: center;
     color: #ffb300;
-    font-family:'Courier New', Courier, monospace;
+    letter-spacing: 0.2em;
+    font-family: 'Minecraft';
     opacity: 0;
     transition: opacity 1s;
 }
@@ -107,6 +121,8 @@ body{
     transition: height 1s, padding-bottom 1s;
     cursor: pointer;
     text-decoration: none;
+    letter-spacing: 0.2em;
+    font-family: 'Minecraft';
 }
 
 #sub:hover{
@@ -117,7 +133,8 @@ body{
 #sub::after{
     content: attr(data-tooltip);
     position: absolute;
-    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    letter-spacing: 0.2em;
+    font-family: 'Minecraft';
     top: 100%;
     left: 50%;
     transform: translateX(-50%);
@@ -165,12 +182,15 @@ body{
     transition: height 1s;
     cursor: pointer;
     text-decoration: none;
+    letter-spacing: 0.2em;
+    font-family: 'Minecraft';
 }
 
 #follow::after{
     content: attr(data-tooltip2);
     position: absolute;
-    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    letter-spacing: 0.2em;
+    font-family: 'Minecraft';
     top: 100%;
     left: 50%;
     transform: translateX(-50%);
@@ -217,6 +237,8 @@ body{
     transition: height 1s;
     cursor: pointer;
     text-decoration: none;
+    letter-spacing: 0.2em;
+    font-family: 'Minecraft';
 }
 
 #disc{
@@ -234,7 +256,8 @@ body{
 #join::after{
     content: attr(data-tooltip3);
     position: absolute;
-    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    letter-spacing: 0.2em;
+    font-family: 'Minecraft';
     top: 100%;
     left: 50%;
     transform: translateX(-50%);
@@ -359,7 +382,7 @@ body{
     padding-top: 1em;
     padding-left: 7em;
     letter-spacing: normal;
-    font-family:'Courier New', Courier, monospace;
+    font-family: 'Courier New', Courier, monospace;
     color: #89fff7;
     text-shadow: 0 0 20px hsl(176, 100%, 77%);
     opacity: 0.7;
@@ -437,7 +460,8 @@ body{
     letter-spacing: normal;
     text-shadow: 0 0 20px white;
     position: absolute;
-    font-family:'Courier New', Courier, monospace;
+    letter-spacing: normal;
+    font-family: 'Courier New', Courier, monospace;
     padding-left: 7em;
     padding-top: 2.5em;
     opacity: 0.7;
@@ -586,7 +610,8 @@ body{
     position: absolute;
     left: 20%;
     margin-top: 1em;
-    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    letter-spacing: 0.2em;
+    font-family: 'Minecraft';
     opacity: 0;
     transition: opacity 1s, left 1s;
 }
@@ -613,8 +638,9 @@ body{
 #thanks{
     color: rgb(255, 255, 131);
     text-shadow: 0 0 20px;
-    font-family: 'Courier New', Courier, monospace;
-    left: 37%;
+    letter-spacing: 0.2em;
+    font-family: 'Minecraft';
+    left: 33%;
     top: 100%;
     position: absolute;
     font-size: 2em;
@@ -1343,4 +1369,43 @@ body{
 
 @keyframes disc{
     100% {transform: rotate(360deg);}
+}
+
+#checkerboard {
+    z-index: -3;
+    position: fixed;
+    bottom: -40%;
+    right: -100%;
+    height: 300%;
+    width: 300%;
+    transform: rotate(150deg);
+    transform-origin: center center;
+    transform-style: preserve-3d;
+    background-color: transparent;
+    background-size: 100px 100px;
+    background-position: 0 0, 50px 50px;
+    background-image: linear-gradient(45deg, #891e77 25%, transparent 25%, transparent 75%, #891e77 75%, #891e77), linear-gradient(45deg, #891e77 25%, transparent 25%, transparent 75%, #891e77 75%, #891e77);
+    animation: move-background 3s linear infinite;
+  }
+  
+  @keyframes move-background {
+    from {
+      background-position: 0 100px, 50px 150px;
+    }
+  }
+
+#bg{
+    justify-content: center;
+    align-items: center;
+    background-image: url(background.png);
+    opacity: 0.5;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    position: fixed;
+    z-index: -2;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(2px);
 }
