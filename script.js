@@ -11,6 +11,36 @@ const thanks = document.getElementById('thanks');
 const yourName = document.getElementById('yourName');
 const drawings = document.getElementById('drawings');
 
+function ResetButton() {
+  playbtn.classList.remove('fadeOuts');
+  playbtn.classList.remove('fadeIns');
+  pausebtn.classList.remove('fadeOuts');
+  pausebtn.classList.remove('fadeIns');
+}
+
+function ResetStats() {
+  audioBobby.style.opacity = 0;
+  audioBobby.style.left = '50%';
+  audioBar.style.width = '20em';
+  audioBar.style.left = '20%';
+  audioBar.style.backgroundColor = '#453d69';
+  seekBar.style.width = '90%';
+  gradient.classList.remove('dance');
+}
+
+function discTrigger(){
+  disc.style.opacity = 1;
+  disc.style.top = '17%';
+  disc.classList.add('discSpin');
+  disc.style.animationPlayState = 'running';
+}
+
+function discStop(){
+  disc.style.opacity = 0;
+  disc.style.top = '20%';
+  disc.style.animationPlayState = 'paused';
+}
+
 document.addEventListener("DOMContentLoaded", function() {
   fakeBut2.disabled = true;
 });
@@ -170,6 +200,11 @@ musico.addEventListener('click', function(shots){
 closeXxv.addEventListener('click', function(unshots){
   musics.classList.remove('showUp');
   musics.classList.add('showDown');
+  ResetStats();
+  ResetButton();
+  discStop();
+  audioPlayer.pause();
+  audioPlayer.currentTime = 0;
 });
 
 //passwords
@@ -225,36 +260,6 @@ const audioBar = document.querySelector('.audio-bar');
 const audioBobby = document.querySelector('.audioBobby');
 const gradient = document.querySelector('.gradient');
 const disc = document.querySelector('.disc');
-
-function ResetButton() {
-  playbtn.classList.remove('fadeOuts');
-  playbtn.classList.remove('fadeIns');
-  pausebtn.classList.remove('fadeOuts');
-  pausebtn.classList.remove('fadeIns');
-}
-
-function ResetStats() {
-  audioBobby.style.opacity = 0;
-  audioBobby.style.left = '50%';
-  audioBar.style.width = '20em';
-  audioBar.style.left = '20%';
-  audioBar.style.backgroundColor = '#453d69';
-  seekBar.style.width = '90%';
-  gradient.classList.remove('dance');
-}
-
-function discTrigger(){
-  disc.style.opacity = 1;
-  disc.style.top = '17%';
-  disc.classList.add('discSpin');
-  disc.style.animationPlayState = 'running';
-}
-
-function discStop(){
-  disc.style.opacity = 0;
-  disc.style.top = '20%';
-  disc.style.animationPlayState = 'paused';
-}
 
 //play/pause
 playPauseBtn.addEventListener('click', () => {

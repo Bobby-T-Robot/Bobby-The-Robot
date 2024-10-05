@@ -1386,13 +1386,13 @@ body{
     background-position: 0 0, 50px 50px;
     background-image: linear-gradient(45deg, #891e77 25%, transparent 25%, transparent 75%, #891e77 75%, #891e77), linear-gradient(45deg, #891e77 25%, transparent 25%, transparent 75%, #891e77 75%, #891e77);
     animation: move-background 3s linear infinite;
-  }
+}
   
   @keyframes move-background {
     from {
       background-position: 0 100px, 50px 150px;
     }
-  }
+}
 
 #bg{
     justify-content: center;
@@ -1408,4 +1408,10 @@ body{
     background-position: center;
     background-repeat: no-repeat;
     filter: blur(2px);
+    animation: bgIntro 2s;
+}
+
+@keyframes bgIntro{
+    from {opacity: 0;}
+    to {opacity: 0.5;}
 }
