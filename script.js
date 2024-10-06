@@ -11,6 +11,7 @@ const thanks = document.getElementById('thanks');
 const yourName = document.getElementById('yourName');
 const drawings = document.getElementById('drawings');
 
+//triggers
 function ResetButton() {
   playbtn.classList.remove('fadeOuts');
   playbtn.classList.remove('fadeIns');
