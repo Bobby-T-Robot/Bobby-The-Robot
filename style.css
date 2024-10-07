@@ -17,7 +17,7 @@ body{
 }
 
 .error{
-    background-image: url(Error.png);
+    background-image: url(Error.webp);
     background-size: contain;
 }
 
@@ -920,7 +920,7 @@ body{
     overflow-y: scroll;
     overflow-x: hidden;
     position: absolute;
-    background-image: url(TextureB.png);
+    background-image: url(TextureB.webp);
     background-repeat: repeat;
     background-size: calc(6em);
     height: 35em;
@@ -1397,7 +1397,7 @@ body{
 #bg{
     justify-content: center;
     align-items: center;
-    background-image: url(background.png);
+    background-image: url(background.webp);
     opacity: 0.5;
     height: 100%;
     width: 100%;
@@ -1414,4 +1414,21 @@ body{
 @keyframes bgIntro{
     from {opacity: 0;}
     to {opacity: 0.5;}
+}
+
+#song-select{
+    background-color: #48c0db;
+    border: none;
+    color:  #ff4268;
+    border-radius: 5px;
+    position: fixed;
+    margin-left: 22%;
+    margin-top: 13%;
+    box-shadow: 0 0 20px #89fff761;
+    transition: margin-left 0.3s;
+    z-index: 2;
+}
+
+.audio-bar:hover #song-select{
+    margin-left: 29% !important;
 }

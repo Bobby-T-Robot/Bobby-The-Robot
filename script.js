@@ -27,6 +27,7 @@ function ResetStats() {
   audioBar.style.backgroundColor = '#453d69';
   seekBar.style.width = '90%';
   gradient.classList.remove('dance');
+  songSelect.style.marginLeft = '22%';
 }
 
 function discTrigger(){
@@ -247,6 +248,7 @@ userField.addEventListener('input', function(passName){
 });
 
 //audio player
+let isHovering = false;
 let isPlaying = false;
 const audioPlayer = document.querySelector('.audio-player');
 const playPauseBtn = document.querySelector('.play-pause-btn');
@@ -279,6 +281,7 @@ playPauseBtn.addEventListener('click', () => {
     audioBar.style.left = '13%';
     audioBar.style.backgroundColor = 'transparent';
     seekBar.style.width = '40%';
+    songSelect.style.marginLeft = '29%';
   }
   playbtn.classList.toggle('fadeOuts');
   pausebtn.classList.toggle('fadeIns');
@@ -328,13 +331,35 @@ audioPlayer.addEventListener('ended', () => {
 });
 
 audioBar.addEventListener('mouseover', () => {
+  isHovering = true;
   if (!isPlaying) {
     discTrigger();
   }
 });
 
 audioBar.addEventListener('mouseout', () => {
+  isHovering = false;
   if (!isPlaying) {
     discStop();
+  }
+});
+
+const songSelect = document.getElementById('song-select');
+const audioSource = document.getElementById('audio-source');
+
+songSelect.addEventListener('change', (f) => {
+  const selectedValue = f.target.value;
+  audioSource.src = selectedValue;
+  audioPlayer.load();
+  audioPlayer.pause();
+  discStop();
+  ResetStats();
+  ResetButton();
+  audioPlayer.currentTime = 0;
+});
+
+songSelect.addEventListener('mouseover', (pls) => {
+  if(!isPlaying) {
+    pls.stopPropagation();
   }
 });

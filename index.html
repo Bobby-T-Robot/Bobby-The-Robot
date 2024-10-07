@@ -6,15 +6,15 @@
   <title>Bobby The Robot</title>
   <meta property="og:title" content="Bobby The Robot" />
   <meta property="og:description" content="Learn about Bobby The Robot. a Commission Page." />
-  <meta property="og:image" content="/BobbyLogo.png" />
+  <meta property="og:image" content="/BobbyLogo.webp" />
   <meta property="og:url" content="https://github.com/Bobby-T-Robot" />
-  <meta name="twitter:card" content="/BobbyLogo.png" />
+  <meta name="twitter:card" content="/BobbyLogo.webp" />
   <meta name="twitter:title" content="Bobby The Robot" />
   <meta name="twitter:description" content="Learn about Bobby The Robot. a Commission Page." />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="style.css">
   <link href="https://fonts.cdnfonts.com/css/digital" rel="stylesheet">
-  <link rel="icon" type="image/png" href="WebLogo.png">
+  <link rel="icon" type="image/webp" href="WebLogo.webp">
 </head>
 <body>
   <div id="bg"></div>
@@ -26,11 +26,11 @@
     <button id="pixelo">PIXEL ARTS</button>
     <button id="musico">MUSIC/SONGS</button>
     <p id="yourName"></p>
-    <img id="fakeShad" src="FakeShader.png">
+    <img id="fakeShad" src="FakeShader.webp">
     <div id="fakeBut"></div>
   <button id="fakeBut2"></button>
   <div id="drawingsWrap">
-  <div id="drawings"><div id="X"><p id="close">𝗫</p></div><img class="nin" src="DRAWINGS/anime3.png"><img class="nin3" src="DRAWINGS/animeEvil.png"><br><br><img class="nin" src="DRAWINGS/iconBobby.png"><img class="nin3" src="DRAWINGS/Dila-2.png"><br><br><img class="nin" src="DRAWINGS/BrawlStars.png"><img class="nin3" src="DRAWINGS/doe3.png"><br><br><img class="nin" src="DRAWINGS/mario.png"><img class="nin3" src="DRAWINGS/beautiful.png"></div>
+  <div id="drawings"><div id="X"><p id="close">𝗫</p></div><img class="nin" src="DRAWINGS/anime3.webp"><img class="nin3" src="DRAWINGS/animeEvil.webp"><br><br><img class="nin" src="DRAWINGS/iconBobby.webp"><img class="nin3" src="DRAWINGS/Dila-2.webp"><br><br><img class="nin" src="DRAWINGS/BrawlStars.webp"><img class="nin3" src="DRAWINGS/doe3.webp"><br><br><img class="nin" src="DRAWINGS/mario.webp"><img class="nin3" src="DRAWINGS/beautiful.webp"></div>
   </div>
     <!--I'M OUT OF WORDS BRO-->
     <div id="animWrap">
@@ -41,7 +41,7 @@
     <!--this is too complicated yet easy-->
     <div id="pixelWrap">
       <div id="pixels">
-        <div id="Xxx"><p id="closeXx">X</p></div><img class="nins1" src="PIXEL ARTS/BobbbB.png"><img class="nins2" src="PIXEL ARTS/MarioooB.png"><br><br><img class="nins1" src="PIXEL ARTS/GBIcon2MB.png"><img class="nins2" src="PIXEL ARTS/GBIconB.png"><br><br><img class="nins1" src="PIXEL ARTS/pickle.png"><img class="nins2" src="PIXEL ARTS/pumpkinB.png">
+        <div id="Xxx"><p id="closeXx">X</p></div><img class="nins1" src="PIXEL ARTS/BobbbB.webp"><img class="nins2" src="PIXEL ARTS/MarioooB.webp"><br><br><img class="nins1" src="PIXEL ARTS/GBIcon2MB.webp"><img class="nins2" src="PIXEL ARTS/GBIconB.webp"><br><br><img class="nins1" src="PIXEL ARTS/pickle.webp"><img class="nins2" src="PIXEL ARTS/pumpkinB.webp">
       </div>
     </div>
     <!--musics here-->
@@ -50,18 +50,34 @@
         <div id="Xxxv"><p id="closevXx">X</p></div>
         <p id="warning">WARNING: BAD MIXING!</p>
         <!--audio player-->
-        <img class="disc" src="disc.png">
+        <img class="disc" src="disc.webp">
         <div class="audio-bar">
           <div class="gradient"></div>
-          <img class ="audioBobby" src="AudioBox.png">
+          <img class ="audioBobby" src="AudioBox.webp">
           <p class="songTitle">Song by Bobby The Robot</p>
-        <audio class="audio-player" src="MUSIC/song-1.ogg" controls>Browser ain't supporting buddy.</audio><!--<br><br><audio class="unnins" src="MUSIC/song-2.ogg" controls>Browser ain't supporting buddy.</audio><br><br><audio class="unnins" src="MUSIC/song-3.ogg" controls>Browser ain't supporting buddy.</audio><br><br><audio class="unnins" src="MUSIC/song-4.ogg" controls>Browser ain't supporting buddy.</audio><br><br><audio class="unnins" src="MUSIC/song-5.ogg" controls>Browser ain't supporting buddy.</audio><br><br><audio class="unnins" src="MUSIC/song-6.ogg" controls>Browser ain't supporting buddy.</audio><br><br><audio class="unnins" src="MUSIC/song-7.ogg" controls>Browser ain't supporting buddy.</audio><br><br><audio class="unnins" src="MUSIC/song-8.ogg" controls>Browser ain't supporting buddy.</audio><br><br><audio class="unnins" src="MUSIC/song-9.ogg" controls>Browser ain't supporting buddy.</audio>-->
+        <audio class="audio-player" controls>
+          <source id="audio-source" src="MUSIC/song-1.ogg" type="audio/ogg">
+          Browser ain't supporting buddy.
+        </audio>
+
+        <select id="song-select">
+          <option value="MUSIC/song-1.ogg">Song 1</option>
+          <option value="MUSIC/song-2.ogg">Song 2</option>
+          <option value="MUSIC/song-3.ogg">Song 3</option>
+          <option value="MUSIC/song-4.ogg">Song 4</option>
+          <option value="MUSIC/song-5.ogg">Song 5</option>
+          <option value="MUSIC/song-6.ogg">Song 6</option>
+          <option value="MUSIC/song-7.ogg">Song 7</option>
+          <option value="MUSIC/song-8.ogg">Song 8</option>
+          <option value="MUSIC/song-9.ogg">Song 9</option>
+        </select>
+
         <div class="audio-controls">
-        <button class = "play-pause-btn"><img class ="play-btn" src="Play.png"><img class="pause-btn" src="Pause.png"></button>
-          <button class="stop-btn"><img class="stop" src="Stop.png"></button>
+        <button class = "play-pause-btn"><img class ="play-btn" src="Play.webp"><img class="pause-btn" src="Pause.webp"></button>
+          <button class="stop-btn"><img class="stop" src="Stop.webp"></button>
           <input type="range" class="seek-bar" min="0" max="100" value="0">
           <div class="volume-controls">
-            <button class="mute-button"><img class="volumed" src="Volume.png"><img class="muted" src="Mute.png"></button>
+            <button class="mute-button"><img class="volumed" src="Volume.webp"><img class="muted" src="Mute.webp"></button>
           </div>
           </div>
         </div>
@@ -78,14 +94,14 @@
     <div id="pfp2">
       <p id="status">Just An Egg!</p>
         <p id="nameRight">Bobby The Robot</p><br>
-      <img id="iconRight" src="BobbyLogo.png">
+      <img id="iconRight" src="BobbyLogo.webp">
     </div>
     <p id="desc"><br>16 year old male artist.<br><br>Other hobbies are<br><br>composing, animating and pixel art.<br><br>Turkish-Georgian.</p>
   </div>
   <div id="menu">
   <h1 id="welcome" class="slide-in-welcome">Welcome to...</h1>
   <br>
-  <img id= "pfp" class="fade-in2" src ="DRAWINGS/iconBobby.png">
+  <img id= "pfp" class="fade-in2" src ="DRAWINGS/iconBobby.webp">
   <br>
   <h1 id= "name" class="fade-in">Bobby The Robot!</h1>
   <br>
@@ -94,11 +110,11 @@
   <br>
   <br>
   <!--I can't deal with re-triggering an animation I ain't a coder.--> 
-  <button id= "sub"><a href = "https://www.youtube.com/@the.robotbobby/featured"><img src="youtube.png" id="yt" alt="Youtube"></a></button>
+  <button id= "sub"><a href = "https://www.youtube.com/@the.robotbobby/featured"><img src="youtube.webp" id="yt" alt="Youtube"></a></button>
   <!--sub button-->
-  <button id= "follow"><a href = "https://twitter.com/TheRobot_Bobby"><img src="X.png" id="twt" alt="Twitter"></a></button>
+  <button id= "follow"><a href = "https://twitter.com/TheRobot_Bobby"><img src="X.webp" id="twt" alt="Twitter"></a></button>
   <!--twitter button-->
-  <button id= "join"><a href = "https://discord.gg/DBrTbRPPjF"><img src="discord.png" id="disc" alt="Twitter"></a></button>
+  <button id= "join"><a href = "https://discord.gg/DBrTbRPPjF"><img src="discord.webp" id="disc" alt="Twitter"></a></button>
   <!--discord button-->
   <br>
   <br>
