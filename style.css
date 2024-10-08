@@ -1379,8 +1379,6 @@ body{
     height: 300%;
     width: 300%;
     transform: rotate(150deg);
-    transform-origin: center center;
-    transform-style: preserve-3d;
     background-color: transparent;
     background-size: 100px 100px;
     background-position: 0 0, 50px 50px;

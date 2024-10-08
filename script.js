@@ -346,6 +346,18 @@ audioBar.addEventListener('mouseout', () => {
 
 const songSelect = document.getElementById('song-select');
 const audioSource = document.getElementById('audio-source');
+const dance = document.querySelector('.dance');
+const animationDurations = {
+  'MUSIC/song-1.ogg': '0.375s',
+  'MUSIC/song-2.ogg': '0.4286s',
+  'MUSIC/song-3.ogg': '0.6s',
+  'MUSIC/song-4.ogg': '0.6186s',
+  'MUSIC/song-5.ogg': '0.4878s',
+  'MUSIC/song-6.ogg': '0.6s',
+  'MUSIC/song-7.ogg': '0.6s',
+  'MUSIC/song-8.ogg': '0.5455s',
+  'MUSIC/song-9.ogg': '0.6s',
+};
 
 songSelect.addEventListener('change', (f) => {
   const selectedValue = f.target.value;
@@ -356,6 +368,10 @@ songSelect.addEventListener('change', (f) => {
   ResetStats();
   ResetButton();
   audioPlayer.currentTime = 0;
+  
+  const defaultDuration = '1.5s'; // default animation duration
+  
+  gradient.style.animationDuration = animationDurations[songSelect.value] || defaultDuration;
 });
 
 songSelect.addEventListener('mouseover', (pls) => {
