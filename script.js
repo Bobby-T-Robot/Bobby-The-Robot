@@ -348,13 +348,13 @@ const songSelect = document.getElementById('song-select');
 const audioSource = document.getElementById('audio-source');
 const dance = document.querySelector('.dance');
 const animationDurations = {
-  'MUSIC/song-1.ogg': '0.375s',
+  'MUSIC/song-1.ogg': '0.75s',
   'MUSIC/song-2.ogg': '0.4286s',
   'MUSIC/song-3.ogg': '0.6s',
   'MUSIC/song-4.ogg': '0.6186s',
   'MUSIC/song-5.ogg': '0.4878s',
   'MUSIC/song-6.ogg': '0.6s',
-  'MUSIC/song-7.ogg': '0.6s',
+  'MUSIC/song-7.ogg': '0.6316s',
   'MUSIC/song-8.ogg': '0.5455s',
   'MUSIC/song-9.ogg': '0.6s',
 };
@@ -378,4 +378,25 @@ songSelect.addEventListener('mouseover', (pls) => {
   if(!isPlaying) {
     pls.stopPropagation();
   }
+});
+
+const checker = document.getElementById('checkToggle');
+const checkerboard = document.getElementById('checkerboard');
+let isVisible = true;
+
+function ButText(button) {
+  if (button.innerText === "REMOVE CB") {
+      button.innerText = "ADD CB";
+  } else {
+      button.innerText = "REMOVE CB";
+  }
+}
+
+checker.addEventListener('click', () => {
+  if (isVisible) {
+      checkerboard.style.display = 'none';
+  } else {
+      checkerboard.style.display = 'block';
+  }
+  isVisible = !isVisible;
 });

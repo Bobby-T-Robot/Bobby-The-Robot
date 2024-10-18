@@ -1430,3 +1430,23 @@ body{
 .audio-bar:hover #song-select{
     margin-left: 29% !important;
 }
+
+#checkToggle{
+    margin-left: 2%;
+    box-shadow: #0a121e 0 10px 10px;
+    position: fixed;
+    top: 90%;
+    z-index: 2;
+    height: 3.5em;
+    width: 7em;
+    font-family: 'Digital';
+    border: solid;
+    outline: auto #48c0db;
+    outline-width: 10px;
+    outline-offset: 4px;
+    border-color: #ff4268;
+    border-radius: 10px;
+    letter-spacing: 0.3em;
+    color: #ff4268;
+    background-color: #89fff7;
+}
