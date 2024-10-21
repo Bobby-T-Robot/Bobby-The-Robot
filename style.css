@@ -3,13 +3,13 @@ body{
 }
 
 @font-face {
-    font-family: 'BadGrunge';
-    src: url('Fonts/BadGrunge.ttf') format('truetype');
+    font-family: 'Modern DOS';
+    src: url('Fonts/ModernDOS.ttf') format('truetype');
 }
 
 @font-face {
-    font-family: 'Minecraft';
-    src: url('Fonts/Minecraft.ttf') format('truetype');
+    font-family: 'Roboto Mono';
+    src: url('Fonts/Roboto_Mono/RobotoMono-VariableFont_wght.ttf') format('truetype');
 }
 
 .skid{
@@ -24,16 +24,17 @@ body{
 #welcome{
     text-align: center;
     letter-spacing: 0.2em;
-    font-family: 'Minecraft';
+    font-family: 'Modern DOS';
     color:#ff0051;
 }
 
 #name{
     text-align: center;
-    font-family: 'BadGrunge';
+    font-family: 'Modern DOS';
     font-size: 3em;
-    letter-spacing: 0.2em;
-    color: #00ffd9;
+    letter-spacing: auto;
+    color: #71faff;
+    text-shadow: 0 0 20px;
     padding-top: 1em;
 }
 
@@ -81,7 +82,7 @@ body{
     text-align: center;
     color: #ffb300;
     letter-spacing: 0.2em;
-    font-family: 'Minecraft';
+    font-family: 'Modern DOS';
     opacity: 0;
     transition: opacity 1s;
 }
@@ -94,7 +95,7 @@ body{
     text-align: center;
     color: #ffb300;
     letter-spacing: 0.2em;
-    font-family: 'Minecraft';
+    font-family: 'Modern DOS';
     opacity: 0;
     transition: opacity 1s;
 }
@@ -122,7 +123,7 @@ body{
     cursor: pointer;
     text-decoration: none;
     letter-spacing: 0.2em;
-    font-family: 'Minecraft';
+    font-family: 'Modern DOS';
 }
 
 #sub:hover{
@@ -134,7 +135,7 @@ body{
     content: attr(data-tooltip);
     position: absolute;
     letter-spacing: 0.2em;
-    font-family: 'Minecraft';
+    font-family: 'Modern DOS';
     top: 100%;
     left: 50%;
     transform: translateX(-50%);
@@ -183,14 +184,14 @@ body{
     cursor: pointer;
     text-decoration: none;
     letter-spacing: 0.2em;
-    font-family: 'Minecraft';
+    font-family: 'Modern DOS';
 }
 
 #follow::after{
     content: attr(data-tooltip2);
     position: absolute;
     letter-spacing: 0.2em;
-    font-family: 'Minecraft';
+    font-family: 'Modern DOS';
     top: 100%;
     left: 50%;
     transform: translateX(-50%);
@@ -238,7 +239,7 @@ body{
     cursor: pointer;
     text-decoration: none;
     letter-spacing: 0.2em;
-    font-family: 'Minecraft';
+    font-family: 'Modern DOS';
 }
 
 #disc{
@@ -257,7 +258,7 @@ body{
     content: attr(data-tooltip3);
     position: absolute;
     letter-spacing: 0.2em;
-    font-family: 'Minecraft';
+    font-family: 'Modern DOS';
     top: 100%;
     left: 50%;
     transform: translateX(-50%);
@@ -591,7 +592,7 @@ body{
     height: 2em;
     width: 1em;
     background-color: #c5dfe4;
-    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-family: 'Modern DOS';
     color: #332e57;
     caret-color: #332e57;
     transition: width 1s;
@@ -611,7 +612,7 @@ body{
     left: 20%;
     margin-top: 1em;
     letter-spacing: 0.2em;
-    font-family: 'Minecraft';
+    font-family: 'Modern DOS';
     opacity: 0;
     transition: opacity 1s, left 1s;
 }
@@ -639,7 +640,7 @@ body{
     color: rgb(255, 255, 131);
     text-shadow: 0 0 20px;
     letter-spacing: 0.2em;
-    font-family: 'Minecraft';
+    font-family: 'Modern DOS';
     left: 33%;
     top: 100%;
     position: absolute;
@@ -891,7 +892,7 @@ body{
 
 #Note{
     color: white;
-    font-family:'Times New Roman', Times, serif;
+    font-family:'Modern DOS';
     animation: note 2s;
 }
 
