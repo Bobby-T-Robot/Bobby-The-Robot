@@ -163,6 +163,9 @@ const pixelo = document.getElementById('pixelo');
 const musico = document.getElementById('musico');
 const musics = document.getElementById('musics');
 const closeXxv = document.getElementById('Xxxv');
+const prico = document.getElementById('prico');
+const prices = document.getElementById('prices');
+const Xbro = document.getElementById('Xbro');
 
 arts.addEventListener('click', function(draws){
   drawings.classList.remove('showDown');
@@ -209,6 +212,16 @@ closeXxv.addEventListener('click', function(unshots){
   audioPlayer.currentTime = 0;
 });
 
+prico.addEventListener('click', function(price){
+  prices.classList.remove('showDown2');
+  prices.classList.add('showUp2');
+});
+
+Xbro.addEventListener('click', function(price){
+  prices.classList.remove('showUp2');
+  prices.classList.add('showDown2');
+});
+
 //passwords
 const body = document.querySelector('body');
 const pfp = document.getElementById('pfp');
@@ -233,7 +246,7 @@ userField.addEventListener('input', function(passName){
       desc.textContent = 'nin';
       body.classList.add('error');
   const bobbu = document.createElement("img");
-  bobbu.src = "Bobbu.png";
+  bobbu.src = "Bobbu.webp";
   bobbu.id = "pfp";
   bobbu.style.position = 'relative';
   names.textContent = 'nin the Hedgehog!'

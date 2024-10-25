@@ -280,7 +280,8 @@ body{
 #menu{
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 10%;
-    border: none;
+    border: solid;
+    border-width: 0.3em;
     height: 46em;
     width: 30em;
     align-items: center;
@@ -882,7 +883,7 @@ body{
     background-color: transparent;
 }
 
-#animsWrap ::-webkit-scrollbar-button{
+#animWrap ::-webkit-scrollbar-button{
     background-color: #48c0db;
 }
 
@@ -965,7 +966,7 @@ body{
     z-index: 1;
     height: 2em;
     width: 2em;
-    border-radius: 0 0 10% 0;
+    border-radius: 0;
     transition: height 0.2s, width 0.2s;
 }
 
@@ -979,10 +980,9 @@ body{
     color: white;
     pointer-events: none;
     border: none;
-    font-weight: bold;
+    font-family: 'Modern DOS';
     left: 28%;
-    top: 7%;
-    font-size: 1.2em;
+    font-size: 1.5em;
 }
 
 #pixelWrap ::-webkit-scrollbar {
@@ -992,14 +992,14 @@ body{
 
 #pixelWrap ::-webkit-scrollbar-thumb{
     background-color: #273a5c;
-    border-radius: 10%;
+    border-radius: 0;
 }
 
 #pixelWrap ::-webkit-scrollbar-track{
     background-color: transparent;
 }
 
-#pixelsWrap ::-webkit-scrollbar-button{
+#pixelWrap ::-webkit-scrollbar-button{
     background-color: #48c0db;
 }
 
@@ -1024,7 +1024,7 @@ body{
 }
 
 #musics{
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
     position: absolute;
     height: 35em;
@@ -1066,28 +1066,6 @@ body{
     left: 28%;
     top: 7%;
     font-size: 1.2em;
-}
-
-#musicWrap ::-webkit-scrollbar {
-    width: 1em;
-    height: 4em;
-}
-
-#musicWrap ::-webkit-scrollbar-thumb{
-    background-color: #273a5c;
-    border-radius: 10%;
-}
-
-#musicWrap ::-webkit-scrollbar-track{
-    background-color: transparent;
-}
-
-#musicsWrap ::-webkit-scrollbar-button{
-    background-color: #48c0db;
-}
-
-#musicWrap ::-webkit-scrollbar-corner{
-    background-color: #273a5c;
 }
 
 .unnins{
@@ -1450,4 +1428,139 @@ body{
     letter-spacing: 0.3em;
     color: #ff4268;
     background-color: #89fff7;
+}
+
+#prico{
+    position: absolute;
+    background-color: #180a1e;
+    border: solid;
+    border-color: #bb48db;
+    text-align: center;
+    color: #bb48db;
+    left: 60%;
+    top: 50%;
+    height: 2em;
+    width: 13em;
+    font-size: 1.3em;
+    letter-spacing: 0.3em;
+    z-index: 2;
+}
+
+#prices{
+    overflow-y: hidden;
+    overflow-x: hidden;
+    position: absolute;
+    height: 19em;
+    width: 35em;
+    left: 14%;
+    top: 27%;
+    background-color: #180a1e;
+    border: solid;
+    border-color: #bb48db;
+    z-index: 3;
+    opacity: 0;
+    box-sizing: border-box;
+    pointer-events: none;
+    padding-bottom: 2em;
+}
+
+#Xbro{
+    background-color: #bb48db;
+    border: none;
+    position: absolute;
+    z-index: 1;
+    height: 2em;
+    width: 2em;
+    border-radius: 0 0 10% 0;
+    transition: height 0.2s, width 0.2s;
+}
+
+#Xbro:hover{
+    height: 2.3em;
+    width: 2.3em;
+}
+
+#closeBro{
+    position: absolute;
+    color: white;
+    pointer-events: none;
+    border: none;
+    font-weight: bold;
+    left: 28%;
+    top: 7%;
+    font-size: 1.2em;
+}
+
+#priceWrap ::-webkit-scrollbar {
+    width: 1em;
+    height: 4em;
+}
+
+#priceWrap ::-webkit-scrollbar-thumb{
+    background-color: #45275c;
+    border-radius: 10%;
+}
+
+#priceWrap ::-webkit-scrollbar-track{
+    background-color: transparent;
+}
+
+#priceWrap ::-webkit-scrollbar-button{
+    background-color: #bb48db;
+}
+
+#priceWrap ::-webkit-scrollbar-corner{
+    background-color: #45275c;
+}
+
+/*I can't deal with editing animations*/
+.showUp2{
+    animation-name: showUp2;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes showUp2{
+    0%{opacity: 0; pointer-events: none; filter: grayscale(100%) brightness(50%) sepia(100%) hue-rotate(300deg) saturate(500%); border-color: #cadb48;}
+    10%{opacity: 0.5; pointer-events: none; filter: grayscale(100%) brightness(50%) sepia(100%) hue-rotate(300deg) saturate(500%); border-color: #cadb48;}
+    15%{opacity: 0; pointer-events: none; filter: grayscale(100%) brightness(50%) sepia(100%) hue-rotate(300deg) saturate(500%); border-color: #cadb48;}
+    20%{opacity: 0.7; pointer-events: none; filter: grayscale(100%) brightness(50%) sepia(100%) hue-rotate(300deg) saturate(500%); border-color: #cadb48;}
+    25%{opacity: 0; pointer-events: none; filter: grayscale(100%) brightness(50%) sepia(100%) hue-rotate(300deg) saturate(500%); border-color: #cadb48;}
+    100%{opacity: 1; pointer-events: auto; background-color: #180a1e; border-color: #bb48db;}
+}
+
+.showDown2{
+    animation-name: showDown2;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-direction: reverse;
+}
+
+@keyframes showDown2{
+    0%{opacity: 0; pointer-events: none; filter: grayscale(100%) brightness(50%) sepia(100%) hue-rotate(300deg) saturate(500%); border-color: #cadb48;}
+    10%{opacity: 0.5; pointer-events: none; filter: grayscale(100%) brightness(50%) sepia(100%) hue-rotate(300deg) saturate(500%); border-color: #cadb48;}
+    15%{opacity: 0; pointer-events: none; filter: grayscale(100%) brightness(50%) sepia(100%) hue-rotate(300deg) saturate(500%); border-color: #cadb48;}
+    20%{opacity: 0.7; pointer-events: none; filter: grayscale(100%) brightness(50%) sepia(100%) hue-rotate(300deg) saturate(500%); border-color: #cadb48;}
+    25%{opacity: 0; pointer-events: none; filter: grayscale(100%) brightness(50%) sepia(100%) hue-rotate(300deg) saturate(500%); border-color: #cadb48;}
+    100%{opacity: 1; pointer-events: auto; background-color: #180a1e; border-color: #bb48db;}
+}
+
+#pricebro{
+    position: absolute;
+    top: 3%;
+    left: 42%;
+    text-align: center;
+    color: #ff43dc;
+    font-size: 1.5em;
+    text-shadow: 0 0 20px red;
+}
+
+#pricelist{
+    position: absolute;
+    text-align: start;
+    top: 27%;
+    left: 5%;
+    font-family: 'Modern DOS';
+    font-size: 1em;
+    letter-spacing: 0.2em;
 }
