@@ -895,6 +895,7 @@ body{
     color: white;
     font-family:'Modern DOS';
     animation: note 2s;
+    margin-left: 1%;
 }
 
 @keyframes note{
