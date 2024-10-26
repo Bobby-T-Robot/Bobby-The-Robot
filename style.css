@@ -431,6 +431,11 @@ body{
 
 #but3{
     height: 1em;
+    outline: solid;
+    outline-width: 5px;
+    outline-color: #ff4268;
+    outline-offset: 0.5em;
+    box-shadow: #ff4268 0 0 20px;
     width: 1em;
     border: none;
     background-color: #f62727;
@@ -439,6 +444,12 @@ body{
     margin-left: 4em;
     z-index: 1;
     transition: background-color 0.1s, height 0.1s, width 0.1s;
+    animation: glow 1s infinite forwards;
+}
+
+@keyframes glow{
+    from{outline-color: #ff4268; outline-offset: 0; outline-width: 0;}
+    to{outline-color: transparent; outline-offset: 0.5em; outline-width: 5px;}
 }
 
 #but3:hover{
@@ -535,6 +546,7 @@ body{
 #fakeBut2{
     height: 3em;
     width: 1em;
+    box-shadow: white 0 0 20px;
     position: absolute;
     transform: translate(-400%, 400%);
     border-radius: 10%;
@@ -597,6 +609,19 @@ body{
     color: #332e57;
     caret-color: #332e57;
     transition: width 1s;
+}
+
+#username.shake{
+    animation-name: shake;
+    animation-duration: 1s;
+}
+
+@keyframes shake{
+    0%{margin-left: 0; margin-right: 0;}
+    25%{margin-left: 0.5em; margin-right: 0em;}
+    50%{margin-left: 0; margin-right: 0.3em;}
+    75%{margin-left: 0.3em; margin-right: 0;}
+    100%{margin-left: 0; margin-right: 0;}
 }
 
 #username.animate{

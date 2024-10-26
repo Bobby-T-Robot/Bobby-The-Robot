@@ -115,11 +115,18 @@ userField.addEventListener('input', () => {
   }
 });
 
+fakeBut2.addEventListener('mouseover', () => {
+  if (userField.value === "") {
+    userField.classList.toggle("shake");
+  }
+});
+
 userField.addEventListener("keydown", function(typed){
   if(typed.keyCode === 13 && userField.value === "") {
     typed.preventDefault();
   } else if (typed.keyCode === 13) {
     console.log('Entered ${username}');
+  userField.classList.remove("shake");
   userField.classList.add("fade-out");
   nameHere.classList.add("fade-out");
   thanks.classList.add("notfade-in3");
