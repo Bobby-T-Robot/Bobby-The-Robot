@@ -1,6 +1,7 @@
 const charList = document.querySelector(".chars");
 const desc = document.querySelector(".description");
 const black = document.getElementById("black");
+const choosed = document.getElementById('choosed');
 let currentOffset = 0;
 
 document.addEventListener('keydown', function(event){
@@ -20,19 +21,39 @@ document.addEventListener('keydown', function(event){
     } else if(currentOffset === -84.50){
         desc.textContent = 'nin niiinn';
     }
-    
-    document.addEventListener('keydown', function(Bobby){
-        if(Bobby.key === "Enter" && currentOffset === 0){
-            black.style.opacity= 1;
-            setTimeout(() =>{
-                window.location.href = "Bobby.html";
-              }, 2000);
-        } else if(Bobby.key === "Enter" && currentOffset === -42.25){
-            black.style.opacity= 1;
-            setTimeout(() =>{
-                window.location.href = "index.html";
-              }, 2000);
-        }
-    });
 });
 
+document.addEventListener('keydown', function(Bobby){
+    if(Bobby.key === "Enter" && currentOffset === 0){
+        choosed.play();
+        black.style.opacity= 1;
+        setTimeout(() =>{
+            window.location.href = "Bobby.html";
+          }, 2000);
+    } else if(Bobby.key === "Enter" && currentOffset === -42.25){
+        choosed.play();
+        black.style.opacity= 1;
+        setTimeout(() =>{
+            window.location.href = "index.html";
+          }, 2000);
+    }
+});
+
+const here = document.getElementById('here');
+const startbg = document.getElementById('startbg');
+const cltext = document.getElementById('CLICK');
+const menuMusic = document.getElementById('menuMusic');
+
+here.addEventListener('click', () =>{
+    menuMusic.play();
+    startbg.style.opacity = 0;
+    startbg.style.pointerEvents = 'none';
+    cltext.style.pointerEvents = 'none';
+    here.style.pointerEvents = 'none';
+    
+    setTimeout(() =>{
+        startbg.remove();
+        cltext.remove();
+        here.remove();
+    }, 1000);
+});

@@ -114,7 +114,7 @@
   margin-left: 55%;
   width: 25em;
   height: 100em;
-  margin-top: 6em;
+  margin-top: 2em;
   text-align: center;
   transform: translateY(0);
   transition: transform 0.2s;
@@ -136,17 +136,80 @@
   text-shadow: 2px 0 #949cdc;
   text-align: justify;
   padding-right: 4em;
+  line-height: 2em;
 }
 
 #black{
   top: 0;
   left: 0;
   position: fixed;
-  z-index: 2;
+  z-index: 3;
   height: 100%;
   width: 100%;
   pointer-events: none;
   background-color: black;
   opacity: 0;
   transition: opacity 2s;
+  animation: black 2s;
+}
+
+@keyframes black{
+    from{opacity: 1;}
+    to{opacity: 0;}
+}
+
+#startbg{
+  top: 0;
+  left: 0;
+  position: fixed;
+  z-index: 2;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient( to top, #6770d5, #65adff);
+  pointer-events: all;
+  opacity: 1;
+  transition: opacity 1s, pointer-events 1s;
+  align-items: center;
+  text-align: center;
+}
+
+#CLICK{
+  top: 40%;
+  left: 0;
+  position: relative;
+  font-size: 2em;
+  font-family: 'Modern DOS';
+  color: #ff4c4c;
+  text-shadow: 3px 0 #ab2e5c;
+  animation: start 2s infinite linear;
+}
+
+@keyframes start{
+  0%{color: #ff4c4c; text-shadow: 3px 0 #ab2e5c;}
+  49%{color: #ff4c4c; text-shadow: 3px 0 #ab2e5c;}
+  50%{color: #ffff72; text-shadow: 3px 0 #ff7965;}
+  100%{color: #ffff72; text-shadow: 3px 0 #ff7965;}
+}
+
+#here{
+  top: 41%;
+  left: 0;
+  position: relative;
+  height: 3em;
+  width: 7em;
+  font-size: 1.3em;
+  font-family: 'Modern DOS';
+  border: none;
+  border-radius: 10px;
+  background-color: #65ff68;
+  box-shadow: 0 4px #3bba78;
+  color: #254135;
+  transition: color 0.2s, top 0.2s, box-shadow 0.2s, background-color 0.2s;
+}
+
+#here:hover{
+  top: 42%;
+  color: #2a2541;
+  box-shadow: none;
+  background-color: #3bba78;
 }
