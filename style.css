@@ -1624,7 +1624,7 @@ body{
     pointer-events: none;
     background-color: black;
     opacity: 0;
-    animation: black 0.3s;
+    animation: black 0.3s !important;
 }
 
 @keyframes black{
