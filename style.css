@@ -1613,3 +1613,21 @@ body{
     color: #FF407D;
     text-decoration: none;
 }
+
+#black{
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 2;
+    height: 100%;
+    width: 100%;
+    pointer-events: none;
+    background-color: black;
+    opacity: 0;
+    animation: black 0.3s;
+}
+
+@keyframes black{
+    from{opacity: 1};
+    to{opacity: 0};
+}

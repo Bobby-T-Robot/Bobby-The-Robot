@@ -51,7 +51,7 @@
     display: inline-block;
     padding: 0.7em 1em;
     background-color: #65ff68;
-    color: #d0ffb0;
+    color: #ecffe0;
     text-align: center;
     font-family: 'Modern DOS';
     text-shadow: 2px 0 #67d595;
@@ -78,9 +78,10 @@
   height: 100%;
   width: 40em;
   position: fixed;
-  background-color: #6770d5;
+  background-image: linear-gradient(to top, #754eaf, #6770d5);
   z-index: -1;
   border-radius: 0 10px 10px 0;
+  border: 0.2em #483480 solid;
 }
 
 #charsel{
@@ -108,7 +109,7 @@
 }
 
 .chars{
-  position: absolute;
+  position: fixed;
   background: none;
   margin-left: 55%;
   width: 25em;
@@ -119,7 +120,7 @@
   transition: transform 0.2s;
 }
 
-img{
+.buddies{
   height: 25em;
   width: 25em;
   margin-bottom: 8em;
@@ -133,4 +134,19 @@ img{
   font-size: 1.3em;
   color: #e4f1ff;
   text-shadow: 2px 0 #949cdc;
+  text-align: justify;
+  padding-right: 4em;
+}
+
+#black{
+  top: 0;
+  left: 0;
+  position: fixed;
+  z-index: 2;
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+  background-color: black;
+  opacity: 0;
+  transition: opacity 2s;
 }

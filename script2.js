@@ -1,5 +1,6 @@
 const charList = document.querySelector(".chars");
 const desc = document.querySelector(".description");
+const black = document.getElementById("black");
 let currentOffset = 0;
 
 document.addEventListener('keydown', function(event){
@@ -13,11 +14,25 @@ document.addEventListener('keydown', function(event){
     }
 
     if(currentOffset === 0){
-        desc.textContent = 'Bobby is very hot ok?';
+        desc.textContent = 'Bobby is a robot made out of flexible metal. The Prototype of Bobby was Called "T-101". Bobby is powered by the "THE FOUR ELEMENTS". The Scientist who made Bobby is still Unknown. Bobby was not made in Starlight Universe. He was brought there. His arms are Cone Shaped, his body is a cylinder, his head is a sphere, his eyes are oval screens and the "2 rings 1 sphere" below him is called "TWISTIES".';
     } else if(currentOffset === -42.25){
         desc.textContent = 'is bobby hot?';
     } else if(currentOffset === -84.50){
         desc.textContent = 'nin niiinn';
     }
+    
+    document.addEventListener('keydown', function(Bobby){
+        if(Bobby.key === "Enter" && currentOffset === 0){
+            black.style.opacity= 1;
+            setTimeout(() =>{
+                window.location.href = "Bobby.html";
+              }, 2000);
+        } else if(Bobby.key === "Enter" && currentOffset === -42.25){
+            black.style.opacity= 1;
+            setTimeout(() =>{
+                window.location.href = "index.html";
+              }, 2000);
+        }
+    });
 });
 
