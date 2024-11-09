@@ -1,0 +1,136 @@
+@property --moveup {
+    syntax: "<length>";
+    initial-value: 0px;
+    inherits: false;
+  }
+  
+  @property --movedown {
+    syntax: "<length>";
+    initial-value: 57.5px;
+    inherits: false;
+  }
+  
+  body {
+    overflow: hidden;
+    min-height: 100vh;
+    background: 
+      conic-gradient(
+        from 60deg at 0 50%, 
+        #65adff 60deg, 
+        transparent 0
+      ) 100% var(--movedown) / 70px 70px repeat-y,
+      conic-gradient(
+        from 60deg at 0 50%, 
+        #6770d5 60deg, 
+        transparent 0
+      ) 100% var(--moveup) / 70px 70px repeat-y #2a2541;
+    animation:move 2s infinite linear
+  }
+  
+  @keyframes move {
+    100% {
+      --moveup:70px;
+      --movedown:-79px;
+    }
+  }
+
+@font-face {
+    font-family: 'Modern DOS';
+    src: url('Fonts/ModernDOS.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Roboto Mono';
+    src: url('Fonts/Roboto_Mono/RobotoMono-VariableFont_wght.ttf') format('truetype');
+}
+
+#Home{
+    left: 2%;
+    top: 2%;
+    border: none;
+    display: inline-block;
+    padding: 0.7em 1em;
+    background-color: #65ff68;
+    color: #d0ffb0;
+    text-align: center;
+    font-family: 'Modern DOS';
+    text-shadow: 2px 0 #67d595;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 1em;
+    box-shadow: 4px 3px /*#8057b8*/ #3bba78;
+    position: fixed;
+    transition: text-shadow 0.2s, color 0.2s, background-color 0.2s, box-shadow 0.2s, margin 0.2s;
+}
+
+#Home:hover{
+    text-shadow: 0 0;
+    color: #769de4;
+    background-color: #5459e8;
+    box-shadow: none;
+    margin-left: 4px;
+    margin-top: 3px;
+}
+
+#bigBox{
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 40em;
+  position: fixed;
+  background-color: #6770d5;
+  z-index: -1;
+  border-radius: 0 10px 10px 0;
+}
+
+#charsel{
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  font-family: 'Modern DOS';
+  color: #ffff72;
+  text-shadow: 4px 0 #ff7965;
+  letter-spacing: 0.2em;
+  font-size: 2.5em;
+  pointer-events: none;
+}
+
+.names{
+  position: relative;
+  top: 0;
+  left: 0;
+  font-family: 'Modern DOS';
+  color: #ff7295;
+  text-shadow: 4px 0 #882a5c;
+  letter-spacing: 0.2em;
+  font-size: 3em;
+  pointer-events: none;
+}
+
+.chars{
+  position: absolute;
+  background: none;
+  margin-left: 55%;
+  width: 25em;
+  height: 100em;
+  margin-top: 6em;
+  text-align: center;
+  transform: translateY(0);
+  transition: transform 0.2s;
+}
+
+img{
+  height: 25em;
+  width: 25em;
+  margin-bottom: 8em;
+}
+
+.description{
+  font-family: 'Modern DOS';
+  position: absolute;
+  top: 20%;
+  left: 7%;
+  font-size: 1.3em;
+  color: #e4f1ff;
+  text-shadow: 2px 0 #949cdc;
+}

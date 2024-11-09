@@ -1446,8 +1446,7 @@ body{
     width: 7em;
     font-family: 'Digital';
     border: solid;
-    outline: auto #48c0db;
-    outline-width: 10px;
+    outline: solid #48c0db;
     outline-offset: 4px;
     border-color: #ff4268;
     border-radius: 10px;
@@ -1589,4 +1588,28 @@ body{
     font-family: 'Modern DOS';
     font-size: 1em;
     letter-spacing: 0.2em;
+}
+
+#Page-2{
+    box-shadow: #0a121e 0 10px 10px;
+    width: 7em;
+    height: 3.5em;
+    position: fixed;
+    background-color: #7044a9;
+    border: solid;
+    border-radius: 10px;
+    border-color: #FF407D;
+    border-width: 2px;
+    margin-left: 2%;
+    top: 78%;
+    font-family: 'Digital';
+    letter-spacing: 0.15em;
+    padding-left: 0.5em;
+    outline-offset: 4px;
+    outline: solid #483288;
+}
+
+#PageLink{
+    color: #FF407D;
+    text-decoration: none;
 }
