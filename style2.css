@@ -79,7 +79,7 @@
   width: 40em;
   position: fixed;
   background-image: linear-gradient(to top, #754eaf, #6770d5);
-  z-index: -1;
+  z-index: 1;
   border-radius: 0 10px 10px 0;
   border: 0.2em #483480 solid;
 }
@@ -175,6 +175,7 @@
 
 #CLICK{
   top: 40%;
+  transform: translate(-50% 50%);
   left: 0;
   position: relative;
   font-size: 2em;
@@ -192,7 +193,8 @@
 }
 
 #here{
-  top: 41%;
+  top: 40%;
+  transform: translate(-50% 50%);
   left: 0;
   position: relative;
   height: 3em;
@@ -212,4 +214,28 @@
   color: #2a2541;
   box-shadow: none;
   background-color: #3bba78;
+}
+
+.PressEnter{
+  color: #65ff68;
+  text-shadow: 2px 0 #3bba78;
+  position: absolute;
+  font-family: 'Modern DOS';
+  top: 85%;
+  font-size: 1.8em;
+  left: 20%;
+}
+
+.musicToggle{
+  height: 3em;
+  width: 3em;
+  position: absolute;
+  left: 4%;
+  top: 90%;
+  background-image: url(Pause.webp);
+  background-size: cover;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  transition: background-image 0.2s;
 }

@@ -43,6 +43,7 @@ const here = document.getElementById('here');
 const startbg = document.getElementById('startbg');
 const cltext = document.getElementById('CLICK');
 const menuMusic = document.getElementById('menuMusic');
+const musicToggle = document.querySelector('.musicToggle');
 
 here.addEventListener('click', () =>{
     menuMusic.play();
@@ -56,4 +57,14 @@ here.addEventListener('click', () =>{
         cltext.remove();
         here.remove();
     }, 1000);
+});
+
+musicToggle.addEventListener('click', function(){
+    if (menuMusic.paused) {
+      menuMusic.play();
+      musicToggle.style.backgroundImage = "url(Pause.webp)";
+    } else {
+      menuMusic.pause();
+      musicToggle.style.backgroundImage = "url(Play.webp)";
+    }
 });
