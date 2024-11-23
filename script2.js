@@ -2,8 +2,11 @@ const charList = document.querySelector(".chars");
 const desc = document.querySelector(".description");
 const black = document.getElementById("black");
 const choosed = document.getElementById('choosed');
+const moveUp = document.querySelector('.moveUp');
+const moveDown = document.querySelector('.moveDown');
 let currentOffset = 0;
 
+//pc scrolling
 document.addEventListener('keydown', function(event){
     event.preventDefault();
     if(currentOffset <= 0 && currentOffset >= -75 && event.key === "ArrowDown"){
@@ -22,6 +25,22 @@ document.addEventListener('keydown', function(event){
         desc.textContent = 'nin niiinn';
     }
 });
+
+//mobile scrolling
+moveDown.addEventListener('click', () =>{
+    if(currentOffset <= 0 && currentOffset >= -75){
+        currentOffset -= 42.25;
+        charList.style.transform = `translateY(${currentOffset}em)`;
+    }
+});
+
+moveUp.addEventListener('click', () =>{
+     if(currentOffset <= -1){
+        currentOffset += 42.25;
+        charList.style.transform = `translateY(${currentOffset}em)`;
+    }
+});
+
 
 document.addEventListener('keydown', function(Bobby){
     if(Bobby.key === "Enter" && currentOffset === 0){
