@@ -5,6 +5,7 @@ const choosed = document.getElementById('choosed');
 const moveUp = document.querySelector('.moveUp');
 const moveDown = document.querySelector('.moveDown');
 let currentOffset = 0;
+var mobil = window.matchMedia("(max-width: 800px)");
 
 //pc scrolling
 document.addEventListener('keydown', function(event){
@@ -41,7 +42,7 @@ moveUp.addEventListener('click', () =>{
     }
 });
 
-
+//pc character select
 document.addEventListener('keydown', function(Bobby){
     if(Bobby.key === "Enter" && currentOffset === 0){
         choosed.play();
@@ -50,6 +51,23 @@ document.addEventListener('keydown', function(Bobby){
             window.location.href = "Bobby.html";
           }, 2000);
     } else if(Bobby.key === "Enter" && currentOffset === -42.25){
+        choosed.play();
+        black.style.opacity= 1;
+        setTimeout(() =>{
+            window.location.href = "index.html";
+          }, 2000);
+    }
+});
+
+//mobile character select
+charList.addEventListener('click', () =>{
+    if(currentOffset === 0 && mobil.matches){
+        choosed.play();
+        black.style.opacity= 1;
+        setTimeout(() =>{
+            window.location.href = "Bobby.html";
+          }, 2000);
+    } else if(currentOffset === -42.25 && mobil.matches){
         choosed.play();
         black.style.opacity= 1;
         setTimeout(() =>{

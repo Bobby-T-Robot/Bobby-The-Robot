@@ -259,6 +259,7 @@
 
   #bigBox{
     opacity: 0;
+    pointer-events: none;
   }
 
   .moveUp{
