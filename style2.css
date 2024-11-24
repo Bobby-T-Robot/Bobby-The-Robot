@@ -251,6 +251,12 @@
   pointer-events: none;
 }
 
+.mobileDesc{
+  position: absolute;
+  pointer-events: none;
+  opacity: 0;
+}
+
 @media screen and (max-width: 800px) {
 
   body{
@@ -260,6 +266,35 @@
   #bigBox{
     opacity: 0;
     pointer-events: none;
+  }
+
+  audio{
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .musicToggleP{
+    height: 3em;
+    width: 3em;
+    position: absolute;
+    left: 4%;
+    top: 90%;
+    background-image: url(Pause.webp);
+    background-size: cover;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    transition: background-image 0.2s;
+  }
+
+  #phoneToggle{
+    z-index: 1;
+    background-color: #6770d5;
+    border-radius: 5px;
+    background-size: 2.7em;
+    background-position: 1.8px;
+    background-repeat: no-repeat;
+    top: 92%;
   }
 
   .moveUp{
@@ -298,18 +333,99 @@
 
   .chars{
     margin-left: 0;
-    margin-top: 10em;
+    transform: translate(-8%);
+    margin-top: 5em;
     position: fixed;
   }
 
   .buddies{
-    height: 15em;
-    width: 15em;
+    height: 17em;
+    width: 17em;
   }
 
   #Home{
-    left: 50%;
-    top: 50%;
+    left: 2%;
+    top: 2%;
     position: fixed;
+  }
+
+  .mobileBox{
+    position: fixed;
+    left: 7%;
+    top: 25%;
+    height: 0;
+    width: 0;
+    background-image: linear-gradient(to top, #754eaf, #6770d5);
+    border: 0.2em #483480 solid;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s, pointer-events 0.3s, height 0.3s, width 0.3s;
+    overflow: hidden;
+    z-index: 1;
+    border-radius: 10px;
+  }
+
+  .boxappear{
+    opacity: 1;
+    height: 25em;
+    width: 20em;
+    pointer-events: all;
+  }
+
+  .mobileDesc{
+    opacity: 1;
+    font-family: 'Modern DOS';
+    padding-left: 2em;
+    font-size: 0.98em;
+    color: white;
+    position: relative;
+    text-shadow: 2px 0 #949cdc;
+    text-align: justify;
+    line-height: 1.2em;
+    padding-right: 2em;
+  }
+
+  .mobilSel{
+    position: relative;
+    font-size: 1em;
+    left: 25%;
+    text-shadow: #a294bd;
+    font-family: 'Modern DOS';
+    color: #ece7ff;
+    border: none;
+    background-color: #5459e8;
+    box-shadow: 4px 4px #583baf;
+    border-radius: 10px;
+    height: 3em;
+    width: 10em;
+    top: 0%;
+    transition: color 0.3s, background-color 0.3s, left 0.3s, top 0.3s, box-shadow 0.3s, text-shadow;
+  }
+
+  .mobilSel:hover{
+    color: #a294bd;
+    background-color: #583baf;
+    left: 25.5%;
+    top: 1%;
+    box-shadow: none;
+    text-shadow: none;
+  }
+
+  .close{
+    position: relative;
+    height: 2em;
+    width:2em;  
+    background-color: #ff4268;
+    color: white;
+    font-family: 'Modern DOS';
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 3px;
+    padding-left: 6.5px;
+    left: 2%;
+    top: 2%;
+    border: none;
+    border-radius: 5px;
   }
 }
