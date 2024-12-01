@@ -412,6 +412,7 @@ function ButText(button) {
   }
 }
 
+
 checker.addEventListener('click', () => {
   if (isVisible) {
       checkerboard.style.display = 'none';
@@ -421,9 +422,14 @@ checker.addEventListener('click', () => {
   isVisible = !isVisible;
 });
 
+const Page2 = document.getElementById('Page-2');
+
+Page2.addEventListener('click', () => {
+  window.location.href = "Lores.html";
+});
+
 //mobile stuff
 var mobil = window.matchMedia("(max-width: 800px)");
-const Page2 = document.getElementById('Page-2');
 
 if (mobil.matches){
   Page2.textContent = "CHARACTERS";
