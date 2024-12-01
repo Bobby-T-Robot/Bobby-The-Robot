@@ -1607,6 +1607,7 @@ body{
     padding-left: 0.5em;
     outline-offset: 4px;
     outline: solid #483288;
+    color: #FF407D;
 }
 
 #PageLink{
@@ -1630,4 +1631,144 @@ body{
 @keyframes black{
     from{opacity: 1};
     to{opacity: 0};
+}
+
+/*mobile suppory*/
+@media screen and (max-width: 800px) {
+    #menu{
+        height: 35em;
+        width: 20em;
+        top: 25%;
+    }
+
+    @keyframes box{
+        0% {height: 5em; opacity: 0; background-color: black;}
+        10% {height: 5em; opacity: 50%; background-color: white;}
+        15% {height: 5em; opacity: 0;}
+        25% {height: 5em; opacity: 75%; background-color: #332e57;}
+        50% {height: 5em;}
+        75% {height: 4em;}
+        100% {height: 35em;}
+    }
+
+    #pfp{
+        height: 10em;
+        width: 10em;
+    }
+
+    #name{
+        font-size: 2em;
+    }
+
+    .abil ,.abil2{
+        transform: translate(0, -100%);
+    }
+
+    #follow, #join, #sub, #yt, #twt, #disc{
+        transform: translate(0, -60%);
+        height: 2.5em;
+        width: auto;
+    }
+
+    #sub{
+        transform: translate(-80%, -60%);
+    }
+
+    #yt:hover{
+        height: 3em;
+        width: auto;
+        filter: grayscale(100%) brightness(50%) sepia(100%) hue-rotate(300deg) saturate(500%);
+    }
+
+    #sub:hover{
+        height: 3em;
+        width: auto;
+    }
+
+    #disc:hover{
+        height: 3.1em;
+    }
+    
+    #follow{
+        transform: translate(-38%, -60%);
+    }
+
+    #twt:hover{
+        height: 3.5em;
+        width: auto;
+        filter: grayscale(100%) brightness(15%) sepia(0%) hue-rotate(0deg) saturate(0%);
+    }
+
+    #join:hover::after, #follow:hover::after, #sub:hover::after{
+        opacity: 0;
+        transform: translateX(-50%) translateY(-10%);
+        pointer-events: none;
+        cursor: default;
+    }
+    
+    #menuRight{
+        opacity: 0;
+    }
+
+    html{
+        overflow: hidden;
+    }
+
+    #Note{
+        text-align: center;
+    }
+
+    #nameHere{
+        top: 82%;
+        position: absolute;
+    }
+
+    #nameHere.animate{
+        opacity: 1;
+        left: 12%;
+    }
+
+    #username{
+        top: 82%;
+        left: 17%;
+    }
+
+    #checkToggle{
+        height: 2em;
+        width: 10em;
+        top: 94%;
+        outline: none;
+        background-color: #89caff;
+        border: 4px solid #4970b0;
+        font-family: 'Modern DOS';
+        box-shadow: #0a121e 0 5px 7px;
+        left: 3%;
+    }
+
+    #Page-2{
+        position: absolute;
+        opacity: 1;
+        top: 94%;
+        height: 2em;
+        width: 10em;
+        outline: none;
+        left: 51%;
+        font-family: 'Modern DOS';
+        color: #FF407D;
+        border: 4px #372b6f solid;
+        box-shadow: #0a121e 0 5px 7px;
+    }
+
+    #thanks{
+        left: 25%;
+    }
+
+    @keyframes notfadein {
+        0% {
+          top: 100%;
+        }
+        100% {
+          top: 87%;
+        }
+    }
 }

@@ -420,3 +420,13 @@ checker.addEventListener('click', () => {
   }
   isVisible = !isVisible;
 });
+
+//mobile stuff
+var mobil = window.matchMedia("(max-width: 800px)");
+const Page2 = document.getElementById('Page-2');
+
+if (mobil.matches){
+  Page2.textContent = "CHARACTERS";
+} else{
+  Page2.textContent = "CHARACTER LORES";
+}
