@@ -107,6 +107,7 @@ but3.addEventListener('click', function tabClose() {
   console.log('Exited');// oooo kmssss
 });
 
+//username
 userField.addEventListener('input', () => {
   if (userField.value !== '') {
     fakeBut2.disabled = false;
@@ -122,9 +123,9 @@ fakeBut2.addEventListener('mouseover', () => {
 });
 
 userField.addEventListener("keydown", function(typed){
-  if(typed.keyCode === 13 && userField.value === "") {
+  if(typed.key === "Enter" && userField.value === "") {
     typed.preventDefault();
-  } else if (typed.keyCode === 13) {
+  } else if (typed.key === "Enter") {
     console.log('Entered ${username}');
   userField.classList.remove("shake");
   userField.classList.add("fade-out");
@@ -149,15 +150,6 @@ userField.addEventListener('input', () => {
 
 menuRight.appendChild(yourName);
 
-yourName.style.fontFamily = 'Digital, sans-serif';
-yourName.style.fontSize = '1em';
-yourName.style.color = 'rgba(133, 255, 253, 0.9)'
-yourName.style.letterSpacing = '0.3em';
-yourName.style.textShadow = '0 0 20px';
-yourName.style.position = 'absolute';
-yourName.style.bottom = '87.8%';
-yourName.style.left = '5%';
-
 //tabs
 const arts = document.getElementById('arts');
 const Xclose = document.getElementById('X');
@@ -174,6 +166,7 @@ const prico = document.getElementById('prico');
 const prices = document.getElementById('prices');
 const Xbro = document.getElementById('Xbro');
 
+//HAHAHAHAHA I'M NOT FIXING THIS THING
 arts.addEventListener('click', function(draws){
   drawings.classList.remove('showDown');
   drawings.classList.add('showUp');
@@ -400,6 +393,8 @@ songSelect.addEventListener('mouseover', (pls) => {
   }
 });
 
+/* UNUSED
+
 const checker = document.getElementById('checkToggle');
 const checkerboard = document.getElementById('checkerboard');
 let isVisible = true;
@@ -420,13 +415,9 @@ checker.addEventListener('click', () => {
       checkerboard.style.display = 'block';
   }
   isVisible = !isVisible;
-});
+});*/
 
-const Page2 = document.getElementById('Page-2');
-
-Page2.addEventListener('click', () => {
-  window.location.href = "Lores.html";
-});
+const Page2 = document.getElementById('PageLink');
 
 //mobile stuff
 var mobil = window.matchMedia("(max-width: 800px)");
@@ -436,3 +427,16 @@ if (mobil.matches){
 } else{
   Page2.textContent = "CHARACTER LORES";
 }
+
+const menuDesc = document.querySelector(".menuDesc");
+const explain = document.querySelectorAll(".explain");
+
+explain.forEach(button => {
+  button.addEventListener('mouseenter', () => {
+    menuDesc.textContent = button.getAttribute('data-text');
+  });
+
+  button.addEventListener('mouseleave', () => {
+    menuDesc.textContent = "";
+  });
+});

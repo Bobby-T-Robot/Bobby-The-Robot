@@ -308,7 +308,7 @@ body{
 }
 
 #menuRight{
-    height: 40em;
+    height: 37em;
     width: 50em;
     font-family: 'Digital', sans-serif;
     letter-spacing: 0.3em;
@@ -318,21 +318,19 @@ body{
     background-color: rgb(21, 18, 32);
     color: rgba(255, 255, 255, 0);
     white-space: nowrap;
-    border-radius: 5%;
+    border-radius: 10px;
     border: none;
-    outline: 1.5em solid rgb(41, 178, 215);
+    outline: 1.5em solid #5075c9;
     position: fixed;
     transition: width 1s, color 1s, left 0.5s ease-out;
-    text-overflow: ellipsis;
-    padding-left: 2em;
-    padding-top: 1em;
+    padding: 1em 2em;
     animation-name: menuRight;
     animation-duration: 2s;
     z-index: 1;
 }
 
 #menuRight.movable{
-    left: 25%;
+    left: 26%;
     color: rgba(255, 255, 255, 0.7);
 }
 
@@ -367,33 +365,35 @@ body{
 }
 
 #iconRight{
-    position: fixed;
+    position: absolute;
+    background-image: url(BobbyLogo.webp);
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 10px;
     height: 7em;
-    width: auto;
+    width: 7em;
     border: none;
-    border-radius: 10%;
-    padding-top: 1em;
-    padding-bottom: 1em;
-    padding-left: 1em;
-    bottom:72%;
+    left: 5%;
+    top: 10%;
     opacity: 0.7;
 }
 
 #nameRight{
     position: absolute;
-    padding-top: 1em;
-    padding-left: 7em;
+    top: 15%;
+    left: 43%;
+    font-size: 1.1em;
     letter-spacing: normal;
     font-family: 'Courier New', Courier, monospace;
     color: #89fff7;
-    text-shadow: 0 0 20px hsl(176, 100%, 77%);
+    text-shadow: 0 0 20px #8afff7;
     opacity: 0.7;
 }
 
 #menuRight > #pfp2{
     position: relative;
-    height: 7em;
-    width: 20em;
+    height: 9em;
+    width: 22em;
     border: none;
     background-color: rgba(48,38,88,0.5);
     border-radius: 5%;
@@ -409,6 +409,37 @@ body{
     opacity: 0;
 }
 
+.descBox{
+    position: absolute;
+    height: 9em;
+    width: 17em;
+    top: 11%;
+    left: 60%;
+    border-radius: 5%;
+    background-color: rgba(48,38,88,0.5);
+    opacity: 0;
+    transition: opacity 1s;
+    text-align: center;
+    padding: 1em;
+    overflow: hidden;
+    text-wrap: wrap;
+}
+
+#menuRight.movable .descBox {
+    opacity: 1;
+}
+
+#menuRight.moved .descBox {
+    opacity: 0;
+}
+
+.menuDesc{
+    font-size: 1.1em;
+    color: white;
+    font-family: 'Modern DOS';
+}
+
+
 #but1{
     height: 1em;
     width: 1em;
@@ -417,6 +448,7 @@ body{
     border-radius: 50%;
     position: relative;
     margin-bottom: 2em;
+    z-index: 1;
 }
 
 #but2{
@@ -427,6 +459,7 @@ body{
     border-radius: 50%;
     position: absolute;
     margin-left: 2em;
+    z-index: 1;
 }
 
 #but3{
@@ -453,8 +486,8 @@ body{
 }
 
 #but3:hover{
-    height: 1.15em;
-    width: 1.15em;
+    height: 1.1em;
+    width: 1.1em;
     border: none;
     background-color: #ff4268;
     border-radius: 50%;
@@ -463,8 +496,8 @@ body{
 }
 
 #but3:active{
-    height: 0.9em;
-    width: 0.9em;
+    height: 0.95em;
+    width: 0.95em;
     background-color: #ce2222;
 }
 
@@ -475,9 +508,34 @@ body{
     position: absolute;
     letter-spacing: normal;
     font-family: 'Courier New', Courier, monospace;
-    padding-left: 7em;
-    padding-top: 2.5em;
+    font-size: 1em;
+    top: 30%;
+    left: 43%;
     opacity: 0.7;
+}
+
+#yourName{
+        display:inline-block;
+        position: absolute;
+        padding: 5px 30px;
+        left: 50%;
+        top: 0;
+        transform: translate(-50%);
+        font-size: 1.1em;
+        color: #0e0e33e6;
+        font-weight: bold;
+        background:
+         linear-gradient(#5075c9,#5075c9) center/calc(100% - 40px) 100% no-repeat,
+         linear-gradient(to bottom left,#5075c9 49%,transparent 50.5%) left/20px 100% no-repeat,
+         linear-gradient(to bottom right,#5075c9 49%,transparent 50.5%) right/20px 100% no-repeat;
+}
+
+#desc{
+    font-size: 1.1em;
+    position: absolute;
+    top: 40%;
+    line-height: 3em;
+    left: 1%;
 }
 
 #cam{
@@ -527,7 +585,7 @@ body{
     position: absolute;
     border: solid;
     background-color: transparent;
-    border-color:rgb(39, 110, 176);
+    border-color:#254a8f;
     border-radius: 20%;
     top: 100%;
     transform: translate(400%, 13%)
@@ -539,18 +597,18 @@ body{
     position: absolute;
     transform: translate(-400%, 100%);
     border-radius: 10%;
-    background-color: rgb(41, 178, 215);
+    background-color: #5075c9;
     border: none;
 }
 
 #fakeBut2{
     height: 3em;
     width: 1em;
-    box-shadow: white 0 0 20px;
+    box-shadow: #71abe9 0 0 20px;
     position: absolute;
     transform: translate(-400%, 400%);
     border-radius: 10%;
-    background-color: rgb(55, 197, 229);
+    background-color: #639ddb;
     border: none;
     transition: width 0.1s, background-color 0.1s;
     z-index: -1;
@@ -562,15 +620,14 @@ body{
     position: absolute;
     transform: translate(-400%, 400%);
     border-radius: 10%;
-    background-color: rgb(55, 197, 229);
+    background-color: #639ddb;
     border: none;
     z-index: -1;
 }
 
-
 #fakeBut2:active{
-    background-color: rgb(30, 120, 194);
-    width: 0.95em;
+    background-color: #4452b8;
+    width: 0.97em;
     z-index: -1;
 }
 
@@ -696,12 +753,13 @@ body{
     text-align: center;
     color: #48c0db;
     left: 60%;
-    top: 60%;
+    top: 58%;
     height: 2em;
     width: 13em;
     font-size: 1.3em;
     letter-spacing: 0.3em;
     z-index: 2;
+    border-radius: 10px;
 }
 
 #drawings{
@@ -831,12 +889,13 @@ body{
     text-align: center;
     color: #48c0db;
     left: 60%;
-    top: 70%;
+    top: 68%;
     height: 2em;
     width: 13em;
     font-size: 1.3em;
     letter-spacing: 0.3em;
     z-index: 2;
+    border-radius: 10px;
 }
 
 #anims{
@@ -936,12 +995,13 @@ body{
     text-align: center;
     color: #48c0db;
     left: 60%;
-    top: 80%;
+    top: 78%;
     height: 2em;
     width: 13em;
     font-size: 1.3em;
     letter-spacing: 0.3em;
     z-index: 2;
+    border-radius: 10px;
 }
 
 #pixels{
@@ -1041,11 +1101,12 @@ body{
     text-align: center;
     color: #48c0db;
     left: 60%;
-    top: 90%;
+    top: 88%;
     height: 2em;
     width: 13em;
     font-size: 1.3em;
     letter-spacing: 0.3em;
+    border-radius: 10px;
     z-index: 2;
 }
 
@@ -1376,6 +1437,8 @@ body{
     100% {transform: rotate(360deg);}
 }
 
+/* UNUSED
+
 #checkerboard {
     z-index: -3;
     position: fixed;
@@ -1395,12 +1458,12 @@ body{
     from {
       background-position: 0 100px, 50px 150px;
     }
-}
+}*/
 
 #bg{
     justify-content: center;
     align-items: center;
-    background-image: url(background.webp);
+    background-image: none; /*make sure to add an image here!!*/
     opacity: 0.5;
     height: 100%;
     width: 100%;
@@ -1436,6 +1499,8 @@ body{
     margin-left: 29% !important;
 }
 
+/*UNUSED
+
 #checkToggle{
     margin-left: 2%;
     box-shadow: #0a121e 0 10px 10px;
@@ -1453,7 +1518,7 @@ body{
     letter-spacing: 0.3em;
     color: #ff4268;
     background-color: #89fff7;
-}
+}*/
 
 #prico{
     position: absolute;
@@ -1463,12 +1528,13 @@ body{
     text-align: center;
     color: #bb48db;
     left: 60%;
-    top: 50%;
+    top: 48%;
     height: 2em;
     width: 13em;
     font-size: 1.3em;
     letter-spacing: 0.3em;
     z-index: 2;
+    border-radius: 10px;
 }
 
 #prices{
@@ -1590,29 +1656,51 @@ body{
     letter-spacing: 0.2em;
 }
 
-#Page-2{
-    box-shadow: #0a121e 0 10px 10px;
+/*#Page-2{
     width: 7em;
     height: 3.5em;
     position: fixed;
-    background-color: #7044a9;
-    border: solid;
+    background-color: #654490;
     border-radius: 10px;
-    border-color: #FF407D;
-    border-width: 2px;
+    border-width: 20px;
     margin-left: 2%;
-    top: 78%;
-    font-family: 'Digital';
-    letter-spacing: 0.15em;
+    top: 90%;
+    font-family: 'Modern DOS';
+    letter-spacing: 0.10em;
     padding-left: 0.5em;
-    outline-offset: 4px;
-    outline: solid #483288;
     color: #FF407D;
-}
+    border: #372b6f solid;
+    box-shadow: #0a121e 0 5px 7px;
+}*/
 
 #PageLink{
-    color: #FF407D;
+    height: 2em;
+    width: 13em;
+    color: #ff7ea7;
     text-decoration: none;
+    background-color: #180a1e;
+    font-family: 'Modern DOS';
+    top: 90%;
+    opacity: 0;
+    position: fixed;
+    padding: 0.2em 0.3em 0.2em 0.3em;
+    border-radius: 10px;
+    box-shadow: #0a121e 0 5px 7px;
+    border: solid #bb48db;
+    letter-spacing: 0.1em;
+    text-align: center;
+    justify-content: center;
+    text-shadow: #FF407D 0 0 6px;
+    z-index: 2;
+    transition: opacity 1s;
+}
+
+#menuRight.movable #PageLink {
+    opacity: 1;
+}
+
+#menuRight.moved #PageLink {
+    opacity: 0;
 }
 
 #black{
@@ -1733,6 +1821,8 @@ body{
         left: 17%;
     }
 
+    /* UNUSED
+
     #checkToggle{
         height: 2em;
         width: 10em;
@@ -1743,9 +1833,9 @@ body{
         font-family: 'Modern DOS';
         box-shadow: #0a121e 0 5px 7px;
         left: 3%;
-    }
+    }*/
 
-    #Page-2{
+    #PageLink{
         position: absolute;
         opacity: 1;
         top: 94%;
@@ -1757,6 +1847,8 @@ body{
         color: #FF407D;
         border: 4px #372b6f solid;
         box-shadow: #0a121e 0 5px 7px;
+        text-align: center;
+        justify-content: center;
     }
 
     #thanks{
@@ -1770,5 +1862,24 @@ body{
         100% {
           top: 87%;
         }
+    }
+
+    #mobMenu{
+        height: 7em;
+        width: 1em;
+        background-color: rgba(0, 0, 0, 0.5);
+        border: solid 4px;
+        border-radius: 10%;
+        top: 20%;
+        left: 91.5%;
+        position: absolute;
+        opacity: 1;
+        animation: mobmenu 2s;
+    }
+
+    @keyframes mobmenu{
+        0%{opacity: 0; width: 0;}
+        85%{opacity: 0; width: 0;}
+        100%{opacity: 1; width: 1em;}
     }
 }

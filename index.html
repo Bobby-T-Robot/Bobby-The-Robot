@@ -18,16 +18,18 @@
 </head>
 <body>
   <div id="black"></div>
-  <button id="checkToggle" onclick="ButText(this)">REMOVE CB</button>
+  <!-- UNUSED: <button id="checkToggle" onclick="ButText(this)">REMOVE CB</button>-->
   <div id="bg"></div>
-  <div id="checkerboard"></div>
+  <!-- UNUSED: <div id="checkerboard"></div>-->
   <p id="Note">Note: Username data will not be saved.<br>It's just a decoration for the Tablet.</p>
   <div id="menuRight">
-    <button id="arts">DRAWINGS</button>
-    <button id="animos">ANIMATIONS</button>
-    <button id="pixelo">PIXEL ARTS</button>
-    <button id="musico">MUSIC/SONGS</button>
-    <button id="prico">PRICES</button>
+    <div class="descBox"><p class="menuDesc"></p></div>
+    <a href="Lores.html" id="PageLink">CHARACTER<br>LORES</a>
+    <button class="explain" data-text="View the peak and the beauty. My arts." id="arts">DRAWINGS</button>
+    <button class="explain" data-text="See what I've animated and can animate." id="animos">ANIMATIONS</button>
+    <button class="explain" data-text="I can also do pixel art as long as it's not too advanced." id="pixelo">PIXEL ARTS</button>
+    <button class="explain" data-text="I can make music " id="musico">MUSIC/SONGS</button>
+    <button class="explain" data-text="AVAILABLE: DRAWINGS ONLY" id="prico">PRICES</button>
     <p id="yourName"></p>
     <img id="fakeShad" src="FakeShader.webp">
     <div id="fakeBut"></div>
@@ -112,9 +114,14 @@
     <div id="pfp2">
       <p id="status">Just An Egg!</p>
         <p id="nameRight">Bobby The Robot</p><br>
-      <img id="iconRight" src="BobbyLogo.webp">
+      <div id="iconRight"></div>
     </div>
-    <p id="desc"><br>16 year old male artist.<br><br>Other hobbies are<br><br>composing, animating and pixel art.<br><br>Turkish-Georgian.</p>
+    <ul id="desc">
+      <li>16 year old male artist.</li>
+      <li>Other hobbies are: </li>
+      <li>composing, animating and pixel art.</li>
+      <li>Turkish-Georgian.</li>
+    </ul>
   </div>
   <div id="menu">
   <h1 id="welcome" class="slide-in-welcome">Welcome to...</h1>
@@ -144,7 +151,8 @@
   </div>
 </div>
 
-<button id="Page-2"><a href="Lores.html" id="PageLink">CHARACTER<br>LORES</a></button>
+<!--for mobile-->
+<div id="mobMenu"></div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   <script src="script.js"></script>

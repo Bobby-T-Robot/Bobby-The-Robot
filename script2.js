@@ -18,13 +18,19 @@ document.addEventListener('keydown', function(event){
         charList.style.transform = `translateY(${currentOffset}em)`;
     }
 
-    if(currentOffset === 0){
-        desc.textContent = 'Bobby is a robot made out of flexible metal. The Prototype of Bobby was Called "T-101". Bobby is powered by the "THE FOUR ELEMENTS". The Scientist who made Bobby is still Unknown. Bobby was not made in Starlight Universe. He was brought there. His arms are Cone Shaped, his body is a cylinder, his head is a sphere, his eyes are oval screens and the "2 rings 1 sphere" below him is called "TWISTIES".';
-    } else if(currentOffset === -42.25){
-        desc.textContent = 'is bobby hot?';
-    } else if(currentOffset === -84.50){
-        desc.textContent = 'nin niiinn';
-    }
+    switch(currentOffset) {
+        case 0:
+          desc.textContent = 'Bobby is a robot made out of flexible metal. The Prototype of Bobby was Called "T-101". Bobby is powered by the "THE FOUR ELEMENTS". The Scientist who made Bobby is still Unknown. Bobby was not made in Starlight Universe. He was brought there. His arms are Cone Shaped, his body is a cylinder, his head is a sphere, his eyes are oval screens and the "2 rings 1 sphere" below him is called "TWISTIES".'
+          break
+        case -42.25:
+          desc.textContent = 'is bobby hot?'
+          break
+        case -84.50:
+          desc.textContent = 'nin niiinn'
+          break
+        default:
+          desc.textContent = ''
+      }
 });
 
 //mobile scrolling
