@@ -115,10 +115,8 @@ body{
     background-color: transparent;
     height: 3em;
     width: auto;
-    padding-left: 0em;
-    padding-right: 0em;
-    padding-top: 0em;
-    padding-bottom: 0em;
+    padding: 0;
+    margin-top: -1em;
     transition: height 1s, padding-bottom 1s;
     cursor: pointer;
     text-decoration: none;
@@ -176,10 +174,8 @@ body{
     background-color: transparent;
     height: 3em;
     width: auto;
-    padding-left: 0em;
-    padding-right: 0em;
-    padding-top: 0em;
-    padding-bottom: 0em;
+    padding: 0;
+    margin-top: -1em;
     transition: height 1s;
     cursor: pointer;
     text-decoration: none;
@@ -231,10 +227,8 @@ body{
     background-color: transparent;
     height: 3em;
     width: auto;
-    padding-left: 0em;
-    padding-right: 0em;
-    padding-top: 0em;
-    padding-bottom: 0em;
+    padding: 0;
+    margin-top: -1em;
     transition: height 1s;
     cursor: pointer;
     text-decoration: none;
@@ -528,6 +522,7 @@ body{
          linear-gradient(#5075c9,#5075c9) center/calc(100% - 40px) 100% no-repeat,
          linear-gradient(to bottom left,#5075c9 49%,transparent 50.5%) left/20px 100% no-repeat,
          linear-gradient(to bottom right,#5075c9 49%,transparent 50.5%) right/20px 100% no-repeat;
+         z-index: 1;
 }
 
 #desc{
@@ -654,7 +649,7 @@ body{
     position: absolute;
     content: attr(playerName);
     left: 28.5%;
-    margin-top: 3em;
+    margin-top: 2em;
     border: none;
     border-radius: 10%;
     padding-left: 1em;
@@ -693,7 +688,7 @@ body{
     color: #befffe;
     position: absolute;
     left: 20%;
-    margin-top: 1em;
+    margin-top: 0;
     letter-spacing: 0.2em;
     font-family: 'Modern DOS';
     opacity: 0;
@@ -1463,8 +1458,8 @@ body{
 #bg{
     justify-content: center;
     align-items: center;
-    background-image: none; /*make sure to add an image here!!*/
-    opacity: 0.5;
+    background-image: url(webBG.webp); /*make sure to add an image here!!*/
+    opacity: 0.2;
     height: 100%;
     width: 100%;
     display: flex;
@@ -1475,11 +1470,12 @@ body{
     background-repeat: no-repeat;
     filter: blur(2px);
     animation: bgIntro 2s;
+    filter: grayscale(75%) blur(5px);
 }
 
 @keyframes bgIntro{
     from {opacity: 0;}
-    to {opacity: 0.5;}
+    to {opacity: 0.2;}
 }
 
 #song-select{

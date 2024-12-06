@@ -108,14 +108,6 @@ but3.addEventListener('click', function tabClose() {
 });
 
 //username
-userField.addEventListener('input', () => {
-  if (userField.value !== '') {
-    fakeBut2.disabled = false;
-  } else {
-    fakeBut2.disabled = true;
-  }
-});
-
 fakeBut2.addEventListener('mouseover', () => {
   if (userField.value === "") {
     userField.classList.toggle("shake");
@@ -125,12 +117,13 @@ fakeBut2.addEventListener('mouseover', () => {
 userField.addEventListener("keydown", function(typed){
   if(typed.key === "Enter" && userField.value === "") {
     typed.preventDefault();
-  } else if (typed.key === "Enter") {
+  } else if (typed.key === "Enter" && userField.value.trim() !== '') {
     console.log('Entered ${username}');
   userField.classList.remove("shake");
   userField.classList.add("fade-out");
   nameHere.classList.add("fade-out");
   thanks.classList.add("notfade-in3");
+  fakeBut2.disabled = false;
 
   setTimeout(function() {
     userField.remove();
@@ -138,6 +131,8 @@ userField.addEventListener("keydown", function(typed){
   nameHere.remove();
     nameHere.disabled = true;
   }, 1000);
+  } else{
+    fakeBut2.disabled = true;
   }
 });
 
@@ -166,7 +161,7 @@ const prico = document.getElementById('prico');
 const prices = document.getElementById('prices');
 const Xbro = document.getElementById('Xbro');
 
-//HAHAHAHAHA I'M NOT FIXING THIS THING
+//HAHAHAHAHA I'M NOT FIXING THIS THING ... anytime soon at least.
 arts.addEventListener('click', function(draws){
   drawings.classList.remove('showDown');
   drawings.classList.add('showUp');
@@ -232,7 +227,7 @@ const nameRight = document.getElementById('nameRight');
 const statuss = document.getElementById('status');
 
 userField.addEventListener('input', function(passName){
-  if(userField.value == "skid"){
+  if(userField.value === "skid"){
     body.classList.add('skid');
     yourName.textContent = `Hello, Skiddy!`;
     pfp.remove();
