@@ -225,6 +225,7 @@ const names = document.getElementById('name');
 const welcome = document.getElementById('welcome');
 const nameRight = document.getElementById('nameRight');
 const statuss = document.getElementById('status');
+const snf = document.querySelector('.snf');
 
 userField.addEventListener('input', function(passName){
   if(userField.value === "skid"){
@@ -235,7 +236,7 @@ userField.addEventListener('input', function(passName){
     skud.src = "skidu.webp";
     skud.id = "pfp";
     document.body.appendChild(skud);
-   } else if(userField.value == "nin"){
+   } else if(userField.value === "nin"){
       pfp.remove();
     yourName.textContent = 'nin';
       desc.textContent = 'nin';
@@ -252,6 +253,8 @@ userField.addEventListener('input', function(passName){
   abil2. textContent = 'nin';
   statuss.textContent = 'nin';
   nameRight.textContent = 'nin';
+    } else if(userField.value === "snf"){
+      snf.style.opacity = 1;
     }
 });
 
@@ -432,6 +435,6 @@ explain.forEach(button => {
   });
 
   button.addEventListener('mouseleave', () => {
-    menuDesc.textContent = "";
+    menuDesc.textContent = "AVAILABLE: DRAWINGS ONLY";
   });
 });
