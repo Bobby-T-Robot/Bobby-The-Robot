@@ -1723,7 +1723,7 @@ body{
     to{opacity: 0};
 }
 
-.snf{
+#snf{
     height: 100%;
     width: 200%;
     opacity: 0;

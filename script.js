@@ -225,7 +225,7 @@ const names = document.getElementById('name');
 const welcome = document.getElementById('welcome');
 const nameRight = document.getElementById('nameRight');
 const statuss = document.getElementById('status');
-const snf = document.querySelector('.snf');
+const snf = document.getElementById('snf');
 
 userField.addEventListener('input', function(passName){
   if(userField.value === "skid"){
