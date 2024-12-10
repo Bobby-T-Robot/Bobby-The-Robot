@@ -1723,7 +1723,16 @@ body{
     to{opacity: 0};
 }
 
-
+.snf{
+    height: 100%;
+    width: 200%;
+    opacity: 0;
+    position: fixed;
+    z-index: 4;
+    left: -40%;
+    transition: opacity 5s;
+    pointer-events: none;
+}
 
 /*mobile suppory*/
 @media screen and (max-width: 800px) {
