@@ -1,0 +1,87 @@
+@font-face {
+    font-family: 'Modern DOS';
+    src: url('Fonts/ModernDOS.ttf') format('truetype');
+}
+
+.MainBox{
+    position: absolute;
+    height: 35em;
+    width: 30em;
+    background-image: linear-gradient(to bottom, #2d2d2d, #1d1d1d);
+    left: 50%;
+    top: 60%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    border: none;
+    box-shadow: #0e0e0e 0 15px;
+}
+
+.buttons{
+    position: relative;
+    height: 4em;
+    width: 4em;
+    font-weight: bold;
+    font-size: 1.3em;
+    background-image: linear-gradient(to top, #272727, #363636);
+    border-radius: 10px;
+    color: white;
+    border: none;
+    margin: 1em 0 0 1.3em;
+    box-shadow: #121212 0 10px;
+    font-family: 'Modern DOS';
+}
+
+.clear{
+    position: relative;
+    height: 4em;
+    width: 4em;
+    font-weight: bold;
+    font-size: 1.3em;
+    background-image: linear-gradient(to top, #272727, #363636);
+    border-radius: 10px;
+    color: white;
+    border: none;
+    margin: 1em 0 0 1.3em;
+    box-shadow: #121212 0 10px;
+    font-family: 'Modern DOS';
+}
+
+.output{
+    position: relative;
+    height: 3em;
+    width: 17.5em;
+    background-image: linear-gradient(to bottom, #763e2e, #a05f40);
+    margin: 2em 2em 1em 2em;
+    border: none;
+    border-radius: 10px;
+    pointer-events: none;
+    font-size: 1.3em;
+    color: black;
+    padding-left: 2em;
+    font-weight: bold;
+    box-shadow: #0e0e0e 0 -10px;
+    font-family: 'Modern DOS';
+}
+
+.acts{
+    background-image: linear-gradient(to top, #be4c32, #d76b39);
+    position: relative;
+    height: 4em;
+    width: 4em;
+    font-weight: bold;
+    font-size: 1.3em;
+    border-radius: 10px;
+    color: white;
+    border: none;
+    margin: 1em 0 0 1.3em;
+    box-shadow: #893522 0 10px;
+    font-family: 'Modern DOS';
+}
+
+.name{
+    color: white;
+    position: absolute;
+    font-family: 'Modern DOS';
+    top: 19%;
+    left: 35%;
+}

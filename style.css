@@ -1734,7 +1734,146 @@ body{
     pointer-events: none;
 }
 
-/*mobile suppory*/
+.passMenu{
+    top: 1.5%;
+    left: 1.5%;
+    height: 30em;
+    width: 30em;
+    position: absolute;
+    background-image: linear-gradient(to top, #1d0031 50%, #96003c);
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+    animation: passGrad 2s forwards alternate infinite;
+}
+
+@keyframes passGrad{
+    0%{background-image: linear-gradient(to top, #1d0031 30%, #96003c);}
+    10%{background-image: linear-gradient(to top, #1d0031 32%, #96003c);}
+    20%{background-image: linear-gradient(to top, #1d0031 34%, #96003c);}
+    30%{background-image: linear-gradient(to top, #1d0031 36%, #96003c);}
+    40%{background-image: linear-gradient(to top, #1d0031 38%, #96003c);}
+    50%{background-image: linear-gradient(to top, #1d0031 40%, #96003c);}
+    60%{background-image: linear-gradient(to top, #1d0031 42%, #96003c);}
+    70%{background-image: linear-gradient(to top, #1d0031 44%, #96003c);}
+    80%{background-image: linear-gradient(to top, #1d0031 46%, #96003c);}
+    90%{background-image: linear-gradient(to top, #1d0031 48%, #96003c);}
+    100%{background-image: linear-gradient(to top, #1d0031 50%, #96003c);}
+}
+
+.passBorder{
+    top: 20%;
+    left: -30%;
+    position: absolute;
+    height: 31em;
+    width: 31em;
+    background-image: linear-gradient(to top, #0f001a 50%, #6e002c);
+    border: none;
+    border-radius: 10px;
+    transition: left 0.3s;
+}
+
+.passBorder:hover{
+    left: -10%;
+}
+
+#newShad{
+    height: 32em;
+    width: 30em;
+    filter: hue-rotate(180deg);
+    animation: shad2 infinite 1s alternate;
+    opacity: 0.33;
+}
+
+.codeText{
+    color: #ff5d9e;
+    text-shadow: #ff0066 0 0 10px;
+    font-size: 2em;
+    font-family: 'Modern DOS';
+    position: absolute;
+    left: 44%;
+    top: 20%;
+}
+
+.License{
+    color: #ffcee2;
+    font-size: 1.5em;
+    font-family: 'Modern DOS';
+    position: absolute;
+    left: 43%;
+    top: 3%;
+    text-decoration: underline;
+}
+
+.codeEnter{
+    position: absolute;
+    top: 30%;
+    left: 38%;
+    z-index: 2;
+    background-color: #10001a;
+    border: none;
+    border-radius: 10px;
+    height: 1.2em;
+    width: 4em;
+    font-family: 'Modern DOS';
+    font-size: 3.7em;
+    text-align: center;
+    font-variant-caps: all-small-caps;
+    color: #ff5d9e;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    outline: none;
+    caret-color: transparent;
+    cursor: pointer;
+}
+
+.codeEnter::placeholder{
+    opacity: 0;
+    color: #ff5d9e;
+    transition: opacity 0.2s;
+}
+
+.codeEnter:focus::placeholder{
+    opacity: 0.5;
+    color: #ff5d9e;
+}
+
+.passNote{
+    font-family: 'Modern DOS';
+    color: #4a3558;
+    position: absolute;
+    top: 42%;
+    left: 25%;
+    text-wrap: wrap;
+    text-align: center;
+    padding: 2em;
+}
+
+.me{
+    position: absolute;
+    color: #4a3558;
+    font-family: 'Modern DOS';
+    top: 95%;
+    left: 70%;
+}
+
+.passWrap{
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.passBorder:hover .passWrap{
+    opacity: 1;
+}
+
+@keyframes shad2{
+    from{opacity: 0.33;}
+    to{opacity: 0.66;}
+}
+
+/*mobile support*/
 @media screen and (max-width: 800px) {
     #menu{
         height: 35em;

@@ -217,6 +217,8 @@ Xbro.addEventListener('click', function(price){
   prices.classList.add('showDown2');
 });
 
+const codeEnter = document.querySelector('.codeEnter');
+
 //passwords
 const body = document.querySelector('body');
 const pfp = document.getElementById('pfp');
@@ -226,9 +228,11 @@ const welcome = document.getElementById('welcome');
 const nameRight = document.getElementById('nameRight');
 const statuss = document.getElementById('status');
 const snf = document.getElementById('snf');
+const snfA = document.querySelector('.snfA');
 
-userField.addEventListener('input', function(passName){
-  if(userField.value === "skid"){
+codeEnter.addEventListener('input', function(passName){
+  //skid
+  if(codeEnter.value === "skid"){
     body.classList.add('skid');
     yourName.textContent = `Hello, Skiddy!`;
     pfp.remove();
@@ -236,7 +240,8 @@ userField.addEventListener('input', function(passName){
     skud.src = "skidu.webp";
     skud.id = "pfp";
     document.body.appendChild(skud);
-   } else if(userField.value === "nin"){
+    //nin
+   } else if(codeEnter.value === "nin"){
       pfp.remove();
     yourName.textContent = 'nin';
       desc.textContent = 'nin';
@@ -253,8 +258,13 @@ userField.addEventListener('input', function(passName){
   abil2. textContent = 'nin';
   statuss.textContent = 'nin';
   nameRight.textContent = 'nin';
-    } else if(userField.value === "snf"){
+  //snf
+    } else if(codeEnter.value === "snf"){
       snf.style.opacity = 1;
+      snfA.play();
+      setTimeout(() =>{
+        window.location.href = "https://gamebanana.com/mods/44194";
+      }, 4000);
     }
 });
 
