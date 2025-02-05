@@ -1,0 +1,101 @@
+body{
+    background-color: red;
+}
+
+@font-face {
+    font-family: 'Modern DOS';
+    src: url('Fonts/ModernDOS.ttf') format('truetype');
+}
+
+.testLogo{
+    position: fixed;
+    background-image: url(LogoTP.png);
+    background-size: cover;
+    height: 10em;
+    width: 10em;
+    top: 100%;
+    left: 43%;
+    opacity: 1;
+    transform: translate(-50%, 0%);
+    animation: intro 10s forwards;
+    border-radius: 10px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+@keyframes intro{
+    0%{top: 50%; left: 50%; opacity: 1; height: 1em; width: 0; transform: translate(-50%, -50%); background-image: none; background-color: white;}
+    17%{width: 10em; height: 1em; transform: translate(-50%, -50%); background-image: none; background-color: white;}
+    25%{height: 10em; width: 10em; transform: translate(-50%, -50%); background-image: none; background-color: white;}
+    26%{background-color: transparent; transform: translate(-50%, -50%) rotate(5deg);}
+    27%{left: 50%; height: 13em; width: 13em; background-image: url(LogoTP.png);}
+    37%{transform: translate(-50%, -50%) rotate(0);}
+    45%{left: 43%;}
+    50%{height: 10em; width: 10em;}
+    80%{top: 50%; transform: translate(-50%, -50%);}
+    90%{top: 100%; transform: translate(-50%, 0);}
+}
+
+.introText1{
+    position: fixed;
+    color: #ff0066;
+    font-size: 4em;
+    font-family: 'Modern DOS';
+    left: 48%;
+    top: 100%;
+    opacity: 1;
+    animation: textint 10s forwards;
+    z-index: 2;
+    pointer-events: none;
+}
+
+@keyframes textint{
+    0%{left: 55%; opacity: 0; top: 40%;}
+    28%{left: 55%; opacity: 0;}
+    50%{left: 48%; opacity: 1;}
+    80%{top: 40%;}
+    90%{top: 100%;}
+}
+
+.introText2{
+    position: fixed;
+    color: white;
+    font-size: 2.15em;
+    font-family: 'Modern DOS';
+    left: 47.4%;
+    top: 100%;
+    opacity: 1;
+    animation: textint1 10s forwards;
+    z-index: 2;
+    pointer-events: none;
+}
+
+@keyframes textint1{
+    0%{left: 54.4%; opacity: 0; top: 51%;}
+    28%{left: 54.4%; opacity: 0;}
+    50%{left: 47.4%; opacity: 1;}
+    80%{top: 51%;}
+    90%{top: 111%;}
+}
+
+.fakebg{
+    position: fixed;
+    height: 13em;
+    width: 28em;
+    top: 100%;
+    left: 50%;
+    background-color: #009cff;
+    transform: translate(-50%, 0);
+    animation: endint 10s forwards;
+    border-radius: 10px;
+    z-index: 1;
+    pointer-events: none;
+}
+
+@keyframes endint{
+    0%{height: 100%; width: 100%; top: 0; left: 0; transform: translate(0,0); border-radius: 0;}
+    50%{height: 100%; width: 100%; top: 0; left: 0; transform: translate(0,0); border-radius: 0;}
+    70%{height: 13em; width: 28em; top: 51%; left: 50%; transform: translate(-50%, -50%); border-radius: 10px;}
+    80%{height: 13em; width: 28em; top: 51%; left: 50%; transform: translate(-50%, -50%); border-radius: 10px;}
+    90%{top: 100%; transform: translate(-50%, 0);}
+}

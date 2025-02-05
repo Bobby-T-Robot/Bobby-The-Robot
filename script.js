@@ -229,6 +229,7 @@ const nameRight = document.getElementById('nameRight');
 const statuss = document.getElementById('status');
 const snf = document.getElementById('snf');
 const snfA = document.querySelector('.snfA');
+const game = document.querySelector('.secret');
 
 codeEnter.addEventListener('input', function(passName){
   //skid
@@ -265,6 +266,16 @@ codeEnter.addEventListener('input', function(passName){
       setTimeout(() =>{
         window.location.href = "https://gamebanana.com/mods/44194";
       }, 4000);
+    //games
+    } else if(codeEnter.value === "t101"){
+      codeEnter.addEventListener('keydown', function(cods){
+        if(cods.key === "Enter"){
+        codeEnter.value = "";
+        game.style.opacity = 1;
+        game.style.pointerEvents = 'all';
+        game.disabled = false;
+        }
+      });
     }
 });
 
@@ -447,4 +458,10 @@ explain.forEach(button => {
   button.addEventListener('mouseleave', () => {
     menuDesc.textContent = "AVAILABLE: DRAWINGS ONLY";
   });
+});
+
+const gameBut = document.querySelector('.gameButton');
+
+gameBut.addEventListener('click', () =>{
+  window.location.href = "Games.html";
 });
