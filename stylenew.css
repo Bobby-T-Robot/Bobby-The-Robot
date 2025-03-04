@@ -168,10 +168,11 @@ body{
     width: 5em;
     transition: filter 0.3s;
     cursor: pointer;
+    animation: logos 1s forwards;
 }
 
 .youtube:hover{
-    filter: grayscale(100%) brightness(50%) sepia(100%) hue-rotate(300deg) saturate(500%);;
+    filter: grayscale(100%) brightness(50%) sepia(100%) hue-rotate(300deg) saturate(500%);
 }
 
 .discord{
@@ -184,10 +185,11 @@ body{
     width: 5em;
     transition: filter 0.3s;
     cursor: pointer;
+    animation: logos2 2s forwards;
 }
 
 .discord:hover{
-    filter: grayscale(100%) brightness(50%) sepia(100%) hue-rotate(180deg) saturate(500%);;
+    filter: grayscale(100%) brightness(50%) sepia(100%) hue-rotate(180deg) saturate(500%);
 }
 
 .twitter{
@@ -200,11 +202,29 @@ body{
     width: 5em;
     transition: filter 0.3s;
     cursor: pointer;
+    animation: logos3 3s forwards;
 }
 
 .twitter:hover{
     filter: grayscale(100%) brightness(50%) sepia(100%) hue-rotate(150deg) saturate(500%);
 }
+
+@keyframes logos{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+@keyframes logos2{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+
+@keyframes logos3{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
 
 .oldweb{
     position: absolute;
@@ -298,6 +318,7 @@ body{
 }
 
 .drawings{
+    position: relative;
     display: inline;
     height: 10em;
     width: auto;
@@ -305,7 +326,27 @@ body{
     border: white solid 3px;
     border-radius: 10px;
     box-shadow: 0 0 30px #000000;
-    transition: height 0.3s, width 0.3s;
+    transition: all 0.3s;
+}
+
+.container2:hover .drawings:not(:hover){
+    opacity: 0.5;
+    filter: blur(2px);
+}
+
+.drawings:hover {
+    z-index: 1;
+    opacity: 1;
+    transform: scale(1.5);
+}
+
+.notice{
+    position: absolute;
+    color: #cdcdcd;
+    left: 50%;
+    top: 2%;
+    font-weight: bold;
+    transform: translate(-50%, 0);
 }
 
 .container3{
