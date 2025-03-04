@@ -282,3 +282,57 @@ body{
     color: #cdcdcd;
     margin: 0.3em 4.8em;
 }
+
+.container2{
+    padding: 1.5em 0 1.5em 4.2em; /*bro I HATE PADDING ORDERS*/
+    position: absolute;
+    top: 55.5%;
+    left: 150%;
+    transform: translate(-50%, -50%);
+    height: calc(100vh - 7em);
+    width: 80em;
+    background-color: #00000063;
+    border-radius: 5em;
+    border: solid #00000077 7px;
+    transition: left 0.3s;
+}
+
+.drawings{
+    display: inline;
+    height: 10em;
+    width: auto;
+    margin: 1.6em 2.1em 0 0;
+    border: white solid 3px;
+    border-radius: 10px;
+    box-shadow: 0 0 30px #000000;
+    transition: height 0.3s, width 0.3s;
+}
+
+.container3{
+    position: absolute;
+    top: 55.5%;
+    left: 250%;
+    transform: translate(-50%, -50%);
+    height: calc(100vh - 7em);
+    width: 80em;
+    background-color: #00000063;
+    border-radius: 5em;
+    border: solid #00000077 7px;
+    transition: left 0.3s;
+}
+
+.Info{
+    height: 90%;
+    margin-left: 20%;
+    margin-top: 2.2%;
+    width: auto;
+    border-radius: 20px;
+    border: solid white 5px;
+}
+
+.infoText{
+    position: absolute;
+    color: #c0c0c0;
+    font-weight: bold;
+    left: 53%;
+}
