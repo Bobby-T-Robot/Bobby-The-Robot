@@ -48,6 +48,14 @@ body{
     transition: left 0.3s;
 }
 
+.BuyaCoffee{
+    position: absolute;
+    top: 85%;
+    left: 9%;
+    transition: color 0.3s;
+    animation: nameenter 4s;
+}
+
 .pfp{
     z-index: 1;
     position: absolute;
