@@ -7,7 +7,7 @@ body{
 
 .navigator{
     background-color: #121212;
-    height: 5em;
+    height: 11vh;
 }
 
 .navlist{
@@ -18,8 +18,8 @@ body{
 
 .navlist li{
     display: inline;
-    margin-right: 10em;
-    font-size: 1.3em;
+    margin-right: 27vh;
+    font-size: 1.5vw;
     color: white;
     font-weight: bold;
     cursor: pointer;
@@ -27,8 +27,8 @@ body{
 
 .navline{
     background-color: #393939;
-    width: 10em;
-    height: 0.3em;
+    width: 22vh;
+    height: 0.5vh;
     position: absolute;
     left: 24%;
     top: 8%;
@@ -40,11 +40,11 @@ body{
     top: 55.5%;
     left: 50%;
     transform: translate(-50%, -50%);
-    height: calc(100vh - 7em);
-    width: 80em;
+    height: 85vh;
+    width: 85vw;
     background-color: #00000063;
-    border-radius: 5em;
-    border: solid #00000077 7px;
+    border-radius: 5vw;
+    border: solid #00000077 0.5vw;
     transition: left 0.3s;
 }
 
@@ -59,34 +59,34 @@ body{
 .pfp{
     z-index: 1;
     position: absolute;
-    height: 20em;
+    height: 43vh;
     width: auto;
     left: 5%;
     top: 25%;
     border-radius: 50%;
-    border: white solid 5px;
+    border: white solid 0.5vw;
     animation: pfpslide 3s forwards;
-    box-shadow: 0 0 40px #000000;
+    box-shadow: 0 0 5vw #000000;
 }
 
 @keyframes pfpslide{
-    0%{opacity: 0; left: 35%; height: 25em;}
+    0%{opacity: 0; left: 35%; height: 48vh;}
     20%{opacity: 1;}
-    50%{left: 35%; height: 25em;}
-    75%{height: 20em; left: 35%;}
+    50%{left: 35%; height: 48vh;}
+    75%{height: 43vh; left: 35%;}
     100%{left: 5%;}
 }
 
 .name{
     position: absolute;
-    font-size: 4em;
+    font-size: 8vh;
     font-weight: bold;
     color: white;
     left: 40%;
     top: 20%;
     animation: nameenter 3s forwards;
-    text-shadow: 0 5px 0 #121212;
-    text-shadow: 0 0 40px #ffffff3f;
+    text-shadow: 0 0.5vw 0 #121212;
+    text-shadow: 0 0 3vw #ffffff3f;
 }
 
 @keyframes nameenter{
@@ -98,9 +98,9 @@ body{
 .desc{
     position: absolute;
     color: white;
-    text-shadow: 0 5px 0 #121212;
+    text-shadow: 0 0.8vh 0 #121212;
     font-weight: bold;
-    font-size: 2em;
+    font-size: 2vw;
     left: 35%;
     top: 35%;
     animation: nameenter 3.5s;
@@ -110,7 +110,7 @@ body{
     background-color: #aeaeae;
     transform: rotate(35deg);
     height: 100vh;
-    width: 3em;
+    width: 6vh;
     position: absolute;
     left: 90%;
     top: 50%;
@@ -146,7 +146,7 @@ body{
     background-color: #aeaeae;
     transform: rotate(-35deg);
     height: 100vh;
-    width: 3em;
+    width: 6vh;
     position: absolute;
     left: 7%;
     top: 50%;
@@ -172,8 +172,8 @@ body{
     top: 87%;
     background-image: url("youtube.webp");
     background-size: cover;
-    height: 3.5em;
-    width: 5em;
+    height: 8vh;
+    width: 5.7vw;
     transition: filter 0.3s;
     cursor: pointer;
     animation: logos 1s forwards;
@@ -185,12 +185,12 @@ body{
 
 .discord{
     position: absolute;
-    left: 80%;
+    left: 81%;
     top: 87%;
     background-image: url("discord.webp");
     background-size: cover;
-    height: 3.8em;
-    width: 5em;
+    height: 8.7vh;
+    width: 5.7vw;
     transition: filter 0.3s;
     cursor: pointer;
     animation: logos2 2s forwards;
@@ -202,12 +202,12 @@ body{
 
 .twitter{
     position: absolute;
-    left: 90%;
+    left: 91.5%;
     top: 87%;
     background-image: url("twitter.webp");
     background-size: cover;
-    height: 4.2em;
-    width: 5em;
+    height: 9.5vh;
+    width: 5.7vw;
     transition: filter 0.3s;
     cursor: pointer;
     animation: logos3 3s forwards;
@@ -240,11 +240,11 @@ body{
     top: 2.5%;
     color: #121212;
     text-decoration: none;
-    font-size: 1.2em;
+    font-size: 1.3vw;
     font-weight: bold;
     background-color: white;
-    padding: 7px 12px 7px 12px;
-    border-radius: 20px;
+    padding: 0.5vw 1vw 0.5vw 1vw;
+    border-radius: 20vw;
     transition: background-color 0.3s;
 }
 
@@ -254,12 +254,12 @@ body{
 
 .oldweb:hover{
     color: #121212;
-    background-color: #c4c4c4;
+    background-color: #c2c2cd;
 }
 
 .logo{
     position: absolute;
-    height: 5em;
+    height: 5.5vw;
     left: 5%;
     top: 0;
 }
@@ -268,60 +268,61 @@ body{
     position: absolute;
     left: 70%;
     top: 5%;
-    height: 30em;
-    width: 22em;
+    height: 66vh;
+    width: 24vw;
     background-color: #00000063;
     overflow: hidden;
-    border-radius: 20px;
-    border-radius: 20px;
-    border: solid #00000077 4px;
+    border-radius: 2vw;
+    border: solid #00000077 0.4vw;
     animation: news 3s forwards;
 }
 
 @keyframes news{
-    0%{height: 2.7em; opacity: 0;}
-    50%{height: 2.7em; opacity: 1;}
-    100%{height: 30em;}
+    0%{height: 2.7vh; opacity: 0;}
+    50%{height: 2.7vh; opacity: 1;}
+    100%{height: 66vh;}
 }
 
 .newart{
-    height: 20em;
+    height: 43vh;
     width: auto;
-    margin-left: 3.5%;
-    border-radius: 10px;
+    margin-left: 4%;
+    border-radius: 1vw;
 }
 
 .newtext{
-    font-size: 1.5em;
+    font-size: 1.5vw;
     font-weight: bold;
     color: white;
-    margin-left: 28%;
+    margin-left: 30%;
 }
 
 .artTitle{
-    font-size: 2em;
+    font-size: 2.5vw;
     font-weight: bold;
     color: white;
-    margin: 0.3em 1.3em;
+    margin: 2.5% 28%;
 }
 
 .artDesc{
+    font-size: 1vw;
     font-weight: bold;
     color: #cdcdcd;
-    margin: 0.3em 4.8em;
+    margin: 2.5% 25%;
 }
 
 .container2{
-    padding: 1.5em 0 1.5em 4.2em; /*bro I HATE PADDING ORDERS*/
+    padding: 5vh 0 1vh 4vh; /*bro I HATE PADDING ORDERS*/
     position: absolute;
     top: 55.5%;
     left: 150%;
     transform: translate(-50%, -50%);
-    height: calc(100vh - 7em);
-    width: 80em;
+    height: 85vh;
+    width: 85vw;
     background-color: #00000063;
-    border-radius: 5em;
-    border: solid #00000077 7px;
+    border-radius: 5vw;
+    overflow: hidden;
+    border: solid #00000077 0.5vw;
     transition: left 0.3s;
 }
 
@@ -354,6 +355,7 @@ body{
     left: 50%;
     top: 2%;
     font-weight: bold;
+    font-size: 2vh;
     transform: translate(-50%, 0);
 }
 
@@ -362,26 +364,31 @@ body{
     top: 55.5%;
     left: 250%;
     transform: translate(-50%, -50%);
-    height: calc(100vh - 7em);
-    width: 80em;
+    height: 85vh;
+    width: 85vw;
     background-color: #00000063;
-    border-radius: 5em;
-    border: solid #00000077 7px;
+    border-radius: 5vw;
+    border: solid #00000077 0.5vw;
     transition: left 0.3s;
 }
 
-.Info{
+/*.Info{
     height: 90%;
     margin-left: 20%;
     margin-top: 2.2%;
     width: auto;
     border-radius: 20px;
     border: solid white 5px;
-}
+}*/
 
 .infoText{
     position: absolute;
     color: #c0c0c0;
     font-weight: bold;
-    left: 53%;
+    font-size: 5vh;
+    text-align: center;
+    line-height: 6vh;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
 }

@@ -20,7 +20,7 @@ item1.addEventListener('click', ()=>{
 });
 
 item2.addEventListener('click', ()=>{
-    navline.style.left =  "44%";
+    navline.style.left =  "43.8%";
     container1.style.left = "-50%";
     container2.style.left = "50%";
     container3.style.left = "150%";
